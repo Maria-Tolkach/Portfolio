@@ -1,0 +1,51 @@
+.social-icons {
+    margin-top: 5px;
+    margin-bottom: -9px;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
+    
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        margin-top: 20px;
+    }
+
+    li {
+        margin-right: 27px;
+        margin-left: 2px;
+
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            margin-right: 29px;
+        }
+    }
+
+    li:last-child {margin-right: 0px;}
+
+    .fa-github {font-size: 58px;}
+    
+    .fa-telegram {color: #039be5;}
+
+    .fa-vk {
+        padding: 10px 9px;
+        margin-bottom: 22px;
+        font-size: 30px;
+        color: white;
+        background-color: #4d76a1;
+        border-radius: 50%;
+    }
+    
+    .fa-facebook {
+        padding: 12px 18px 10px 18px;
+        margin-bottom: 22px;
+        font-size: 30px;
+        color: white;
+        background-color: #3b5998;
+        border-radius: 50%;
+    }
+}
