@@ -109,15 +109,38 @@
 
 .header-icons {
     display: none;
-
+    
     // Для Десктопа
     @media (min-width: 1200px) {
         display: flex;
         font-size: 34px;
     }
     
-    a {margin-right: 20px;}
+    a {
+        margin-right: 20px;
+        transition: 0.5s;
+        position: relative;
+        z-index: 1;
+    }
     a:last-child {margin-right: 0px;}
+
+    a::after {
+        position: absolute;
+        content: "";
+        top: 5px;
+        bottom: 0px;
+        left: -3px;
+        right: 6px;
+        background-color: #fbdc4d;
+        z-index: -1;
+        width: 0%;
+        transition: 0.5s;
+    } 
+    a:hover:after {
+        width: 120%;
+        border-radius: 50%;
+    }
+    a:hover {transform: scale(1.2);}
 }
 
 .header_content {

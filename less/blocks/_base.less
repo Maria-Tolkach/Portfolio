@@ -46,11 +46,13 @@ button, input {
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 0;
     display: none;
+    transition: 0.6s;
 }
 
 #overlay.active {
     display: block;
     z-index: 10;
+    transition: 1s;
 }
 
 .none {display: none;}
@@ -199,12 +201,20 @@ button, input {
 }
 
 .yellow-button {
+    display: inline-block;
     padding: 15px 42px 17px;
     font-family: "Mplus 1p";
     font-size: 22px;
     font-weight: 700;
     border-radius: 31px;
     background-color: #fbdc4d;
+    z-index: 1;
+    transition: 0.5s;
+}
+.yellow-button:hover {
+    transform: scale(1.1);
+    border-radius: 31px;
+    box-shadow: 0 20px 20px -5px rgba(251, 219, 77, 0.4);
     z-index: 1;
 }
 
@@ -217,4 +227,15 @@ button, input {
     border-radius: 32px;
     border: 4px solid #464646;
     z-index: 1;
+    transition: 0.5s;
+}
+.button:hover {
+    transform: scale(1.1);
+    border-radius: 31px;
+    box-shadow: 0px 20px 15px -10px rgba(70, 70, 70, 0.3);
+    z-index: 1;
+}
+
+.section-title {
+    
 }

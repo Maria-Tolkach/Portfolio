@@ -14,7 +14,7 @@
 <body>
     <div id="overlay"></div>
     <!-- header -->
-    <header class="header">
+    <header class="header none">
         <!-- header_top-menu -->
         <div class="header_top-menu">
             <div class="logo"><a href="index.html">MT</a></div> 
@@ -63,8 +63,11 @@
             <img src="./img/bg/bg-header.png" alt="Рабочий стол">
         </div>  
         
+        <!-- container -->
         <div class="container">
+            <!-- row column -->
             <div class="row column">
+                <!-- skills -->
                 <div class="skills">
                     <h3>Что я умею:</h3> 
                     <ul>
@@ -78,6 +81,7 @@
                     <a href="#" class="yellow-button">Смотреть работы</a>
                     </div>
                 </div>
+                <!-- //skills -->
                 <div class="contact-icons">
                     <h3>На связи:</h3> 
                     <ul class="row social-icons">
@@ -89,10 +93,53 @@
                     <a href="mailto:marry.tolkach@gmail.com" class="header-email">marry.tolkach@gmail.com</a>
                 </div>
             </div>
+            <!-- //row column -->
         </div>
-        
+        <!-- //container -->
     </header>
     <!-- //header -->
+
+    <main>
+        <!-- section_portfolio -->
+        <div class="section_portfolio">
+            <div class="container">
+                <h2 class="section-title">Портфолио</h2>
+                <div class="portfolio-works">
+                    <ul class="row">
+                        <li>Все работы</li>
+                        <li>Bootstrap</li>
+                        <li>WordPress</li>
+                        <li>Frontend</li>
+                    </ul>
+                </div>
+                <!-- row -->
+                <div class="row">
+                    <div class="portfolio_big-card">
+                        <a href="#">
+                            <img src="./img/section-portfolio/img-1.jpg" alt="“Форест тревел”">
+                            <div class="card-button">
+                                <a href="#"></a>
+                            </div>
+                        </a>
+                        <p>Верстка “Форест тревел” <br>
+                        Верстка многостраничного сайта.</p>  
+                    </div>
+                    <div class="portfolio_big-card">
+                        <a href="#">
+                            <img src="./img/section-portfolio/img-2.jpg" alt="Сайт для коворкинга “Мечта”">
+                            <div class="card-button">
+                                <a href="#"></a>
+                            </div>
+                        </a>
+                        <p>Сайт для коворкинга “Мечта”<br>
+                            Верстка лендинга.</p>  
+                    </div>
+                </div>
+                <!-- //row -->
+            </div>
+        <!-- //section_portfolio -->
+        </div>
+    </main>
     <script src="libs/jquery/jquery-3.5.0.min.js"></script>
     <script src="js/main.js"></script>
 </body>

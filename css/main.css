@@ -52,10 +52,14 @@ input {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 0;
   display: none;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 #overlay.active {
   display: block;
   z-index: 10;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .none {
   display: none;
@@ -227,12 +231,23 @@ input {
   }
 }
 .yellow-button {
+  display: inline-block;
   padding: 15px 42px 17px;
   font-family: "Mplus 1p";
   font-size: 22px;
   font-weight: 700;
   border-radius: 31px;
   background-color: #fbdc4d;
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.yellow-button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-radius: 31px;
+  -webkit-box-shadow: 0 20px 20px -5px rgba(251, 219, 77, 0.4);
+          box-shadow: 0 20px 20px -5px rgba(251, 219, 77, 0.4);
   z-index: 1;
 }
 .button {
@@ -243,6 +258,16 @@ input {
   font-weight: 700;
   border-radius: 32px;
   border: 4px solid #464646;
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-radius: 31px;
+  -webkit-box-shadow: 0px 20px 15px -10px rgba(70, 70, 70, 0.3);
+          box-shadow: 0px 20px 15px -10px rgba(70, 70, 70, 0.3);
   z-index: 1;
 }
 .header {
@@ -375,9 +400,34 @@ input {
 }
 .header-icons a {
   margin-right: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
 }
 .header-icons a:last-child {
   margin-right: 0px;
+}
+.header-icons a::after {
+  position: absolute;
+  content: "";
+  top: 5px;
+  bottom: 0px;
+  left: -3px;
+  right: 6px;
+  background-color: #fbdc4d;
+  z-index: -1;
+  width: 0%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header-icons a:hover:after {
+  width: 120%;
+  border-radius: 50%;
+}
+.header-icons a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .header_content {
   margin-top: 30px;
@@ -722,11 +772,17 @@ input {
 .social-icons li {
   margin-right: 27px;
   margin-left: 2px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 @media (min-width: 1200px) {
   .social-icons li {
     margin-right: 29px;
   }
+}
+.social-icons li:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 .social-icons li:last-child {
   margin-right: 0px;
@@ -752,5 +808,13 @@ input {
   color: white;
   background-color: #3b5998;
   border-radius: 50%;
+}
+.section_portfolio {
+  padding: 110px 0 120px;
+  background-color: #f4f8f9;
+}
+.portfolio-works {
+  max-width: ;
+  width: 556px;
 }
 /*# sourceMappingURL=main.css.map */
