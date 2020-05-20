@@ -2,6 +2,8 @@
     padding: 25px 0px 95px;
     max-width: 1600px;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
     
     // Для Планшета
     @media (min-width: 768px) {
@@ -35,78 +37,6 @@
     }
 }
 
-.header-nav {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgb(255, 255, 255);
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    padding-left: 40px;
-    max-width: 400px;
-    width: 100%;
-    padding-top: 80px;
-    transform: translateX(100%);
-    transition: 0.5s;
-
-    // Для Десктопа
-    @media (min-width: 1200px) {
-        position: relative;
-        max-width: unset;
-        display: block;
-        padding-top: 0px;
-        padding-left: 0px;
-        width: auto;
-        margin-bottom: 0px;
-        transform: translateX(0%);
-
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 1.2;
-    }
-}
-
-.header-nav.active {
-    transform: translateX(0%);
-    z-index: 10;
-}
-
-.header-nav a {
-    position: relative;
-    font-size: 20px;
-    z-index: 1;
-    margin-bottom: 10px;
-
-    // Для Десктопа
-    @media (min-width: 1200px) {
-        margin-right: 75px;
-        margin-bottom: 0px;
-    }
-
-    &:after {
-        position: absolute;
-        content: "";
-        bottom: 3px;
-        left: -5px;
-        width: 0px;
-        height: 5px;
-        background-color: #fbdc4d;
-        transition: 0.5s;
-        z-index: -1;
-    } 
-
-    &:hover:after {
-        transition: width 0.5s;
-        width: 113%;
-    }
-
-    &:last-child {
-        margin-right: 0px;
-    }
-}
-
 .header-icons {
     display: none;
     
@@ -117,30 +47,36 @@
     }
     
     a {
-        margin-right: 20px;
         transition: 0.5s;
         position: relative;
         z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
     }
     a:last-child {margin-right: 0px;}
 
     a::after {
         position: absolute;
         content: "";
-        top: 5px;
+        top: 0px;
         bottom: 0px;
-        left: -3px;
-        right: 6px;
-        background-color: #fbdc4d;
+        left: 0px;
+        right: 0px;
         z-index: -1;
         width: 0%;
+        border-radius: 50%;
+        background-color: #fbdc4d;
         transition: 0.5s;
     } 
     a:hover:after {
-        width: 120%;
+        width: 100%;
         border-radius: 50%;
     }
-    a:hover {transform: scale(1.2);}
+    a:hover {transform: scale(1.08);}
 }
 
 .header_content {
@@ -159,6 +95,7 @@
 
 .person-info {
     margin-top: 66px;
+    z-index: 1;
     
     // Для Планшета
     @media (min-width: 768px) {
@@ -168,7 +105,6 @@
     
     p {
         margin-top: 18px;
-        color: #393f47;
         color: rgb(57, 63, 71);
         font-size: 18px;
         font-weight: 400;
@@ -178,7 +114,7 @@
         // Для Планшета
         @media (min-width: 768px) {
             margin-top: 20px;
-            max-width: unset;
+            max-width: 400px;
         }
         
         // Для Десктопа
@@ -187,6 +123,7 @@
             font-size: 24px;
             font-weight: 500;
             line-height: 1.5;
+            max-width: unset;
         }
     }
 }
@@ -242,6 +179,7 @@
         display: flex;
         margin-top: 32px;
         a {margin-right: 20px;}
+        a:last-child {margin-right: 0;}
     }
 
 }
@@ -260,17 +198,20 @@
         position: relative;
         padding-top: 0px;
         padding-left: 37px;
-        width: 50%;
+        width: 48%;
         transform: scale(1);
         margin: unset;
     }
     
     // Для Десктопа
     @media (min-width: 1200px) {
-        padding-top: 24px;
-        padding-left: 100px;
-        max-width: unset;
-        max-height: unset;
+        // padding-top: 24px;
+        // padding-left: 100px;
+        // max-width: unset;
+        // max-height: unset;
+        padding-left: 0;
+        max-width: 460px;
+        max-height: 411px;
     }
 
     &::after {
@@ -278,22 +219,22 @@
         @media (min-width: 768px) {
             position: absolute;
             content: "";
-            top: 6px;
-            left: 80px;
+            top: 35%;
+            left: 25%;
+            width: 100%;
+            height: 100%;
             background-color: rgba(244,248,249,0.5);
             z-index: -1;
-            width: 320px;
-            height: 320px;
             transition: 0.5s;
         }
         
-        // Для Десктопа
-        @media (min-width: 1200px) {
-            top: 150px;
-            left: 150px;
-            width: 474px;
-            height: 410px;
-        }
+        // // Для Десктопа
+        // @media (min-width: 1200px) {
+        //     top: 35%;
+        //     left: 25%;
+        //     width: 100%;
+        //     height: 100%;
+        // }
     }   
 }
 
@@ -339,11 +280,11 @@
 
     // Для Десктопа
     @media (min-width: 1200px) {
-        margin-right: 204px;
-        margin-top: -14px;
+        // margin-right: 204px;
+        margin-top: -11px;
         font-size: 24px;
         line-height: 1.6;
-        max-width: unset;
+        max-width: 640px;
     }
 
     k {
@@ -395,7 +336,9 @@
     }
 
     li {
+        position: relative;
         margin-bottom: 19px;
+
         // Для Планшета
         @media (min-width: 768px) {
             margin-bottom: 23px;
@@ -404,6 +347,16 @@
         // Для Десктопа
         @media (min-width: 1200px) {
             margin-bottom: 0;
+            padding-left: 35px;
+        }
+    }
+    li::before {
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            position: absolute;
+            content: "\2014";
+            top: 0px;
+            left: 0px;  
         }
     }
 
@@ -422,12 +375,13 @@
     // Для Десктопа
     @media (min-width: 1200px) {
         display: block;
-        margin-top: 50px;
+        margin-top: 37px;
     }
 }
 
 .contact-icons {
     margin-top: 43px;
+    max-width: 330px;
 
     // Для Планшета
     @media (min-width: 768px) {
@@ -437,6 +391,7 @@
     // Для Десктопа
     @media (min-width: 1200px) {
         margin-top: -14px;
+        margin-right: 63px;
     }
 
     h3 {
@@ -460,10 +415,24 @@
     font-size: 18px;
     font-weight: 400;
     border-bottom: 1px solid  black;
+    text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
 
     // Для Десктопа
     @media (min-width: 1200px) {
         font-size: 24px;
     }
+    &:hover {
+        color: #039be5;
+        border-bottom: 1px solid #039be5;
+    }
+    &:active {
+        color: #ea655f;
+        border-bottom: 1px solid #ea655f;
+    }   
+    &:focus {
+        color: #ea655f;
+        border-bottom: 1px solid #ea655f;
+    }
 }
+
 

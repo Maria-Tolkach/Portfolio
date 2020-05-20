@@ -1,4 +1,13 @@
 $(document).ready(function () {
+
+    // Фильтрация проектов
+    let containerEl = document.querySelector('#portfolio-projects');
+    let mixer = mixitup(containerEl,{
+        classNames: {
+            block: ""
+        }
+    })
+
     /*
     1-Получить кнопку по которой будет клик
     2-Получить мобильное меню
@@ -16,16 +25,19 @@ $(document).ready(function () {
    /*1*/const mobileMenuToggle = document.querySelector('.toggle-menu');
    /*2*/const mobMenu = document.querySelector('.header-nav');
    /*5*/const overlay = document.querySelector('#overlay');
+   const logo = document.querySelector('.logo')
 
    /*3*/mobileMenuToggle.addEventListener('click', function(){
        mobMenu.classList.toggle('active');
        /*4*/this.classList.toggle('active');
        /*6*/overlay.classList.toggle('active');
+       logo.classList.toggle('active');
    })
 
    /*7*/window.addEventListener('resize', function(){
         /*8*/mobMenu.classList.remove('active');
         /*8*/mobileMenuToggle.classList.remove('active');
         /*8*/overlay.classList.remove('active');
+        logo.classList.toggle('active');
    })
 })

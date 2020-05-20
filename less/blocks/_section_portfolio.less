@@ -1,8 +1,324 @@
 .section_portfolio {
-    padding: 110px 0 120px;
+    padding: 55px 0 90px;
     background-color: #f4f8f9;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        padding: 75px 0 75px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        padding: 110px 0 120px;
+    }
 }
 
 .portfolio-works {
-    max-width: ;width: 556px;
+    display: none;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        margin-top: 45px;
+        margin-bottom: 49px;
+        display: block;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        margin-top: 50px;
+        margin-bottom: 45px;
+    }
+}
+
+.portfolio-works__item{
+    // Для Планшета
+    @media (min-width: 768px) {
+        margin-right: 49px;
+        font-weight: 700;
+        font-size: 24px;
+        border: none;
+        background-color: transparent;
+        color: #8fa5ae;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        font-weight: 800;
+        font-size: 28px;
+        margin-right: 50px;
+    }
+
+    &:focus {
+        // Для Планшета
+        @media (min-width: 768px) {
+            color: #000000;
+            font-weight: 800;
+        }
+    }
+}
+
+.portfolio_card {
+    max-width: 290px;
+    margin-top: 40px;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        margin-top: 0px;
+        width: 50%;
+        max-width: 338px;
+        margin-right: 30px;
+        &:nth-child(odd) {margin-right: 32px;}
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        width: 50%;
+        max-width: 556px;
+        &:nth-child(odd) {margin-right: 30px;}
+        margin-right: 30px;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: "Mplus 1p";
+        margin-top: 5px;
+
+        // Для Планшета
+        @media (min-width: 768px) {
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            font-size: 22px;
+        }
+    }
+
+    &:last-child {margin-right: 0;}
+
+}
+
+.portfolio_small-cards {
+    max-width: 290px;
+    margin-top: 46px;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        max-width: 338px;
+        margin-top: 25px;
+        // &:nth-child(odd) {margin-right: 32px;}
+        &:nth-child(3) {display: none;}
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        max-width: 360px;
+        margin-top: 61px;
+        // &:nth-child(odd) {margin-right: 30px;}
+        margin-right: 30px;
+        &:nth-child(3) {display: unset;}
+    }
+
+    p {
+        font-size: 16px;
+        margin-top: 4px;
+        font-family: "Mplus 1p";
+        font-weight: 300;
+
+        // Для Планшета
+        @media (min-width: 768px) {
+            font-size: 20px;
+            margin-top: 6px;
+        }
+    }
+
+    &:last-child {margin-right: 0;}
+}
+
+.portfolio_card-description {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        font-size: 32px;
+    }
+}
+
+.portfolio_mini-card-description{
+    font-size: 22px;
+    font-weight: 700;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        font-size: 26px;
+    }
+}
+
+.portfolio_big-card {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    transition: 0.5s;
+    margin-bottom: 31px;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        margin-bottom: 36px;
+    }
+    
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        margin-bottom: 21px;
+    }
+}
+
+.portfolio_big-card::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(251, 220, 77, 0.851);
+    transition: 0.5s;
+    transform: translateY(100%);
+}
+
+.portfolio_small-card {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    transition: 0.5s;
+    margin-bottom: 26px;
+    
+    // Для Планшета
+    @media (min-width: 768px) {
+        margin-bottom: 32px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        margin-bottom: 22px;
+    }
+}
+
+.portfolio_small-card::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(251, 220, 77, 0.851);
+    transition: 0.5s;
+    transform: translateY(100%);
+}
+
+.card-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    padding: 14px 30px 14px;
+    border-radius: 52px;
+    border-width: 3px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+
+    font-size: 22px;
+    color: #ea736d;
+    font-weight: 800;
+
+    transform: translate(-250%);
+    transition: 0.5s;
+    display: block;
+
+    &:hover {
+        background-color: rgb(234, 115, 109);
+        color: white;
+        border-color: rgb(234, 115, 109);
+        transition: 0.5s;
+    }
+
+    &:active {
+        background-color: rgb(212, 66, 59);
+        color: white;
+        border-color: rgb(212, 66, 59); 
+        transition: 0.5s;
+    }
+}
+
+.small-card__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    padding: 14px 25px 14px;
+    border-radius: 52px;
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+
+    font-size: 20px;
+    color: #ea736d;
+    font-weight: 800;
+
+    transform: translate(-200%);
+    transition: 0.5s;
+    display: block;
+
+    &:hover {
+        background-color: rgb(234, 115, 109);
+        color: white;
+        border-color: rgb(234, 115, 109);
+        transition: 0.5s;
+    }
+    &:active {
+        background-color: rgb(212, 66, 59);
+        color: white;
+        border-color: rgb(212, 66, 59); 
+        transition: 0.5s;
+    }
+}
+
+.portfolio_big-card:hover::before {
+    display: block;
+    transform: translateY(0%);
+    transition: 0.5s;
+}
+
+.portfolio_small-card:hover::before {
+    display: block;
+    transform: translateY(0%);
+    transition: 0.5s;
+}
+
+.portfolio_big-card:hover .card-button {
+    display: block;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+
+.portfolio_small-card:hover .small-card__button{
+    display: block;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
 }

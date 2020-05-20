@@ -5,9 +5,10 @@ html {scroll-behavior: smooth;}
 html, body {
     margin: 0px;
     padding: 0px;
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: "Mplus 1p", sans-serif;
     color: rgb(0, 0, 0);
     transition: 0.5s;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -35,6 +36,8 @@ img {
 button, input {
     outline: none;
     cursor: pointer;
+    padding: 0px;
+    margin: 0px;
 }
 
 #overlay {
@@ -64,29 +67,32 @@ button, input {
     padding-left: 15px;
     padding-right: 15px;
 
-    @media (min-width: 467px) {
-        max-width: 467px;
+    @media (min-width: 320px) {
+        max-width: 320px;
     }
 
     // Для Планшета
     @media (min-width: 768px) {
         padding-left: 30px;
         padding-right: 30px;
-        max-width: 1140px;
+        max-width: 1000px;
     }
 
     // Для Десктопа
     @media (min-width: 1200px) {
         padding-left: 0px;
         padding-right: 0px;
+        max-width: 1140px;
     }
 }
 
 .logo {
     position: relative;
+    display: block;
     font-size: 42px;
     font-weight: 900;
     z-index: 1;
+    transition: 0.5s;
     
     // Для Планшета
     @media (min-width: 768px) {
@@ -99,6 +105,8 @@ button, input {
     }
 }
 
+.logo:hover {transform: scale(1.15);}
+
 .logo::after {
     position: absolute;
     content: "";
@@ -109,63 +117,6 @@ button, input {
     background-color: #fbdc4d;
     z-index: -1;
 } 
-
-.toggle-menu {
-    padding-right: 20px;
-    position: relative;
-    cursor: pointer;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-
-    // Для Планшета
-    @media (min-width: 768px) {
-        padding-right: 33px;
-    }
-    
-    // Для Десктопа
-    @media (min-width: 1200px) {
-        display: none;
-        padding-right: 0px;
-    }
-}
-
-.toggle-menu.active {
-    z-index: 10;
-    span {
-        background-color: transparent;
-        &::before {
-            transform: rotate(45deg);
-            top: 0px;
-        }
-        &::after {
-            transform: rotate(-45deg);
-            bottom: 0px;
-        }
-    }
-}
-
-.toggle-menu span{
-    display: block;
-    position: relative;
-    width: 40px;
-    height: 5px;
-    background-color: black;
-
-    &::before, &::after {
-        content: "";
-        position: absolute;
-        width: 40px;
-        height: 5px;
-        background-color: black;
-        left: 0px;
-    }
-
-    &::before {top: -10px;}
-    &::after{bottom: -10px;}
-}
 
 .row {
     display: flex;
@@ -188,6 +139,11 @@ button, input {
     // Для Планшета
     @media (min-width: 768px) {
         flex-direction: row;
+        justify-content: space-between;
+    }
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        justify-content: space-between;
     }
 }
 
@@ -197,6 +153,10 @@ button, input {
     // Для Планшета
     @media (min-width: 768px) {
         flex-direction: row;
+    }
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        justify-content: space-between;
     }
 }
 
@@ -211,8 +171,9 @@ button, input {
     z-index: 1;
     transition: 0.5s;
 }
+
 .yellow-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     border-radius: 31px;
     box-shadow: 0 20px 20px -5px rgba(251, 219, 77, 0.4);
     z-index: 1;
@@ -229,13 +190,71 @@ button, input {
     z-index: 1;
     transition: 0.5s;
 }
+
 .button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     border-radius: 31px;
     box-shadow: 0px 20px 15px -10px rgba(70, 70, 70, 0.3);
     z-index: 1;
 }
 
 .section-title {
+    position: relative;
+    font-size: 42px;
+    font-weight: 800;
+    z-index: 1;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        font-size: 64px;  
+    }
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    left: -5px;
+    right: -5px;
+    height: 12px;
+    background-color: #fbdc4d;
+    z-index: -1;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        bottom: 12px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        bottom: 15px;  
+    }
+} 
+
+.link {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 36px;
+
+    a {color: #039be5;}
     
+    span {
+        display: inline-block;
+        border-bottom: 1px solid #039be5;
+    }
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        margin-top: 31px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        display: none;
+    }
 }

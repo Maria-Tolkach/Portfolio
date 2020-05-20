@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- FontAwesome -->
-    <script src="https://use.fontawesome.com/5071d729ba.js"></script>
-    <!-- Шрифты -->
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 
     <title>Project Porfolio</title>
@@ -14,14 +11,24 @@
 <body>
     <div id="overlay"></div>
     <!-- header -->
-    <header class="header">
+    <header class="header none">
         <!-- header_top-menu -->
         <div class="header_top-menu">
-            <div class="logo"><a href="index.html">MT</a></div> 
+            <a class="logo" href="index.html">MT</a>
             <div class="header-nav">
-                <a href="#"><span>Главная</span></a>
-                <a href="#"><span>Работы</span></a>
-                <a href="#"><span>Контакты</span></a>
+                <div class="logo-nav" href="index.html">MT</div>
+                <a href="#">Главная</a>
+                <a href="#">Услуги</a>
+                <a href="#">Работы</a>
+                <a href="#">Контакты</a>
+                <ul class="row social-icons social-icons-nav">
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+                <div class="header-email-nav">
+                <a href="mailto:marry.tolkach@gmail.com" class="header-email">marry.tolkach@gmail.com</a></div>
             </div>
             <div class="header-icons">
                 <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -41,12 +48,12 @@
                     <div class="person-info">
                         <h1><span class="name">Мария</span><br><span class="name">Толкач</span></h1>
                         
-                        <p>Верстальщик сайтов, веб&nbsp;-&nbsp;разработчик. 
+                        <p>Верстальщик сайтов, веб&shy;&nbsp;-&nbsp;разработчик. 
                         Оперативная&nbsp;верстка. Работаю с 
                         соблюдением сроков и выполнением ТЗ.</p>
 
                         <div class="row header-buttons">
-                            <a href="#" class="yellow-button">Познакомиться</a> 
+                            <a href="#scroll" class="yellow-button">Познакомиться</a> 
                             <a href="#" class="button">Контакты</a> 
                         </div>
                         
@@ -68,14 +75,14 @@
             <!-- row column -->
             <div class="row column">
                 <!-- skills -->
-                <div class="skills">
+                <div class="skills" id="scroll">
                     <h3>Что я умею:</h3> 
                     <ul>
-                        <li><span>&mdash;</span> <k>Pixel</k><w>pixel</w>, полное соответствие макету.</li>
-                        <li><span>&mdash;</span> <k>Bерстаю</k><w>верстаю</w> с сеткой или без.</li>
-                        <li><span>&mdash;</span> <k>Aдаптивная</k><w>адаптивная</w> верстка под мобильные устройства.</li>
-                        <li><span>&mdash;</span> <k>Oптимизация</k><w>оптимизация</w> по retina экраны</li>
-                        <li><span>&mdash;</span> <k>C</k><w>с</w> Bootstrap и без него.</li>
+                        <li><k>Pixel</k><w>pixel</w>, полное соответствие макету.</li>
+                        <li><k>Bерстаю</k><w>верстаю</w> с сеткой или без.</li>
+                        <li><k>Aдаптивная</k><w>адаптивная</w> верстка под мобильные устройства.</li>
+                        <li><k>Oптимизация</k><w>оптимизация</w> по retina экраны</li>
+                        <li><k>C</k><w>с</w> Bootstrap и без него.</li>
                     </ul>
                     <div class="skills-button">
                     <a href="#" class="yellow-button">Смотреть работы</a>
@@ -83,7 +90,7 @@
                 </div>
                 <!-- //skills -->
                 <div class="contact-icons">
-                    <h3>На связи:</h3> 
+                    <h3>На связи:</h3>
                     <ul class="row social-icons">
                         <li><a href="#"><i class="fa fa-github"></i></a></li>
                         <li><a href="#"><i class="fa fa-telegram"></i></a></li>
@@ -101,46 +108,81 @@
 
     <main>
         <!-- section_portfolio -->
-        <div class="section_portfolio none">
+        <section class="section_portfolio">
             <div class="container">
-                <h2 class="section-title">Портфолио</h2>
+                <h2><span class="section-title">Портфолио</span></h2>
                 <div class="portfolio-works">
-                    <ul class="row">
-                        <li>Все работы</li>
-                        <li>Bootstrap</li>
-                        <li>WordPress</li>
-                        <li>Frontend</li>
-                    </ul>
-                </div>
-                <!-- row -->
-                <div class="row">
-                    <div class="portfolio_big-card">
-                        <a href="#">
-                            <img src="./img/section-portfolio/img-1.jpg" alt="“Форест тревел”">
-                            <div class="card-button">
-                                <a href="#"></a>
-                            </div>
-                        </a>
-                        <p>Верстка “Форест тревел” <br>
-                        Верстка многостраничного сайта.</p>  
-                    </div>
-                    <div class="portfolio_big-card">
-                        <a href="#">
-                            <img src="./img/section-portfolio/img-2.jpg" alt="Сайт для коворкинга “Мечта”">
-                            <div class="card-button">
-                                <a href="#"></a>
-                            </div>
-                        </a>
-                        <p>Сайт для коворкинга “Мечта”<br>
-                            Верстка лендинга.</p>  
+                    <div class="portfolio-works-toggle">
+                        <button class="portfolio-works__item control-active" data-filter="all">Все работы</button>
+                        <button class="portfolio-works__item" data-filter=".boots">Bootstrap</button>
+                        <button class="portfolio-works__item" data-filter=".wp">WordPress</button>
+                        <button class="portfolio-works__item" data-filter=".frontend">Frontend</button>
                     </div>
                 </div>
-                <!-- //row -->
+                <!-- potfolio-projects -->
+                <div id="portfolio-projects">
+                    <!-- row -->
+                    <div class="row column">
+                        <div class="portfolio_card mix frontend">
+                            <a href="#" class="portfolio_big-card">
+                                <img src="./img/section-portfolio/img-1.jpg" alt="“Форест тревел”">
+                                <button class="card-button">Смотреть проект</button>
+                            </a>
+                            <a class="portfolio_card-description">Верстка &Prime;Форест тревел&Prime;</a>  
+                            <p>Верстка многостраничного сайта.</p>
+                        </div>
+                        <div class="portfolio_card mix frontend">
+                            <a href="#" class="portfolio_big-card">
+                                <img src="./img/section-portfolio/img-2.jpg" alt="Сайт для коворкинга “Мечта”">
+                                <button class="card-button">Смотреть проект</button>
+                            </a>
+                            <a class="portfolio_card-description">Сайт для коворкинга &Prime;Мечта&Prime;</a>  
+                            <p>Верстка лендинга.</p>
+                        </div>
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row column">
+                        <!-- portfolio_small-cards -->
+                        <div class="portfolio_small-cards mix boots">
+                            <a href="#" class="portfolio_small-card">
+                                <img src="./img/section-portfolio/img-3.jpg" alt="“Форест тревел”">
+                                <button class="small-card__button">Смотреть проект</button>
+                            </a>
+                            <a class="portfolio_mini-card-description">Верстка &Prime;Мир Авто&Prime;</a>  
+                            <p>Верстка многостраничного сайта.</p>
+                        </div>
+                        <div class="portfolio_small-cards mix wp boots">
+                            <a href="#" class="portfolio_small-card">
+                                <img src="./img/section-portfolio/img-4.jpg" alt="“Форест тревел”">
+                                <button class="small-card__button">Смотреть проект</button>
+                            </a>
+                            <a class="portfolio_mini-card-description">Верстка &Prime;Мир Авто&Prime;</a>  
+                            <p>Верстка многостраничного сайта.</p>
+                        </div>
+                        <div class="portfolio_small-cards mix frontend">
+                            <a href="#" class="portfolio_small-card">
+                                <img src="./img/section-portfolio/img-5.jpg" alt="“Форест тревел”">
+                                <button class="small-card__button">Смотреть проект</button>
+                            </a>
+                            <a class="portfolio_mini-card-description">Верстка &Prime;Мир Авто&Prime;</a>  
+                            <p>Верстка многостраничного сайта.</p>
+                        </div>
+                        <!-- //portfolio_small-cards -->
+                    </div>
+                    <!-- //row -->
+                    <div class="link">
+                        <span><a href="#">Смотреть все работы</a></span>
+                    </div>
+                </div>
+                <!-- //potfolio-projects -->
             </div>
+        </section>
         <!-- //section_portfolio -->
-        </div>
     </main>
     <script src="libs/jquery/jquery-3.5.0.min.js"></script>
+    <script src="https://use.fontawesome.com/5071d729ba.js"></script>
+    <script src="./libs/mixitup-3/mixitup.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

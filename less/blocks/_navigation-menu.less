@@ -1,0 +1,230 @@
+.header-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 29px;
+    width: 100%;
+    max-width: 320px;
+    padding-top: 25px;
+    padding-bottom: 176px;
+    transform: translateX(100%);
+    transition: 0.5s;
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        position: relative;
+        max-width: unset;
+        display: block;
+        padding-top: 0px;
+        padding-left: 0px;
+        width: auto;
+        margin-bottom: 0px;
+        padding-bottom: 0;
+        transform: translateX(0%);
+
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+}
+
+.header-nav.active {
+    transform: translateX(0%);
+    z-index: 10;
+}
+
+.header-nav a {
+    position: relative;
+    font-size: 20px;
+    z-index: 1;
+    margin-bottom: 22px;
+    font-weight: 700;
+    box-shadow: inset 0 -1px white, inset 0 -2px #000;
+
+    &:nth-child(2){
+        display: none;
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            display: unset;
+        }
+    }
+
+    &:nth-child(3){
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            display: none;
+        }
+    }
+
+    &:nth-child(5){
+        margin-bottom: 20px;
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &:last-child {margin-right: 0px;}
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        margin-right: 75px;
+        margin-bottom: 0px;
+        margin-top: 0;
+        border-bottom: none;
+        box-shadow: none;
+    }
+
+    &:after {
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            position: absolute;
+            content: "";
+            bottom: 3px;
+            left: -5px;
+            width: 0px;
+            height: 5px;
+            background-color: #fbdc4d;
+            transition: 0.5s;
+            z-index: -1;
+        }
+    } 
+
+    &:hover:after {
+        transition: width 0.5s;
+        width: 110%;
+    }
+
+    &:active, &:focus {
+        color: #ea655f;
+        box-shadow: inset 0 -1px white, inset 0 -2px #ea655f;
+
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            color: black;
+            box-shadow: none;
+        }
+    }
+}
+
+.logo-nav {
+    position: relative;
+    display: block;
+    font-size: 42px;
+    font-weight: 900;
+    z-index: 1;
+    transition: 0.5s;
+    margin-bottom: 23px;
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
+.logo-nav::after {
+    position: absolute;
+    content: "";
+    bottom: 11px;
+    left: -5px;
+    right: -5px;
+    height: 10px;
+    background-color: #fbdc4d;
+    z-index: -1;
+} 
+
+.toggle-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    padding-right: 7px;
+    margin-top: -12px;
+    cursor: pointer;
+    z-index: 2;
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
+.toggle-menu.active {
+    z-index: 10;
+    span {
+        background-color: transparent;
+        &::before {
+            transform: rotate(45deg);
+            top: 0px;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            bottom: 0px;
+        }
+    }
+}
+
+.toggle-menu span{
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 5px;
+    background-color: black;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        width: 40px;
+        height: 5px;
+        background-color: black;
+    }
+
+    &::before {top: -10px;}
+    &::after{bottom: -10px;}
+}
+
+.social-icons-nav {
+    margin-bottom: 10px;
+
+    li {margin-right: 17px;}
+
+    a:active {box-shadow: none;
+    color: black;}
+    a:focus {box-shadow: none;
+        color: black;}
+    a {box-shadow: none;}
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
+.header-email-nav {
+    a {
+        font-size: 18px;
+        // color: #039be5;
+        // border-bottom: #039be5;
+        box-shadow: none;
+        color: #039be5;
+        border-bottom: 1px solid #039be5;
+        font-weight: 400;
+        // &:active {color: #ea655f;}
+        
+        // &:focus {color: #ea655f;}
+    }
+    a:active, a:focus {
+        color: #ea655f;
+        box-shadow: none;
+    }
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
