@@ -218,7 +218,7 @@ button, input {
 .section-title::after {
     position: absolute;
     content: "";
-    bottom: 9px;
+    bottom: 7px;
     left: -5px;
     right: -5px;
     height: 12px;
@@ -258,3 +258,33 @@ button, input {
         display: none;
     }
 }
+.title-little {
+    position: relative;
+    font-size: 20px;
+    font-weight: 800;
+    
+    // Для Планшета
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
+    
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        font-size: 26px;
+    }
+}
+
+.title-little::after {
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        position: absolute;
+        content: "";
+        bottom: 5px;
+        left: 0px;
+        right: 0px;
+        height: 7px;
+        background-color: #fbdc4d;
+        z-index: -1;
+    }
+} 
+

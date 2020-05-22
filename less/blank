@@ -7,3 +7,52 @@
     @media (min-width: 1200px) {
         
     }
+
+
+
+
+
+
+
+
+        // &:nth-child(even) {
+    //     // Для Планшета
+    //     @media (min-width: 768px) {
+    //         flex-direction: row-reverse;
+    //         text-align: right;
+
+    //         .works-algoritm__item-text {padding-right: 30px;}
+
+    //         &::after {
+    //             position: absolute;
+    //             content: "";
+    //             right: 35px;
+    //             left: unset;
+    //             top: 94px;
+    //             bottom: 0px;
+    //             width: 4px;
+    //             border-radius: 2px;
+    //             background-color: #e1eef4;
+    //         }
+    //     }
+
+    //     // Для Десктопа
+    //     @media (min-width: 1200px) {
+    //         .works-algoritm__item-text {padding-right: 45px;}
+    //     }
+    // }
+
+    // &:nth-child(odd) {
+        
+    //     // Для Планшета
+    //     @media (min-width: 768px) {
+    //         margin-left: auto;
+    //         .works-algoritm__item-text {padding-left: 30px;}
+            
+    //     }
+
+    //     // Для Десктопа
+    //     @media (min-width: 1200px) {
+    //         .works-algoritm__item-text {padding-left: 45px;}
+    //     }
+    // }

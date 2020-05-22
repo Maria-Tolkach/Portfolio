@@ -1,0 +1,292 @@
+.section_how-i-work {
+    padding: 55px 0px 60px;
+    max-width: 1600px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    
+    // Для Планшета
+    @media (min-width: 768px) {
+        padding: 85px 0px 85px;
+    }
+    
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        padding: 140px 0px 145px;
+        background-image: url("../img/bg/line_how-i-work.jpg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: repeat;
+    }
+}
+
+.works-algoritm{
+    margin-left: auto;
+    margin-right: auto;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        max-width: 768px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        max-width: 1005px;
+    }
+
+    h2 {
+        text-align: center;
+        padding-bottom: 45px;
+
+        // Для Планшета
+        @media (min-width: 768px) {padding-bottom: 149px;}
+
+        // Для Десктопа
+        @media (min-width: 1200px) {padding-bottom: 145px;}
+    }
+        
+    .section-title {
+        font-size: 38px;
+        // Для Планшета
+        @media (min-width: 768px) {
+            font-size: 52px;
+        }
+
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            font-size: 64px;
+        }
+    }
+}
+
+.works-algoritm__item{
+    position: relative;
+    display: flex;
+    padding-bottom: 35px;
+    margin-bottom: 24px;
+    
+    // Для Планшета
+    @media (min-width: 768px) {
+        width: 55.3%;
+        &:nth-child(3){
+            padding-bottom: 0px;
+            margin-bottom: 24px;
+        }
+        &:nth-child(4){
+            padding-bottom: 0px;
+            margin-bottom: 7px;
+        }
+        &:nth-child(5){
+            padding-bottom: 0px;
+            margin-bottom: -6px;
+        }
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        width: 53.7%;
+        margin-bottom: 10px;
+        padding-bottom: 0px;
+
+        &:nth-child(2) {
+            padding-bottom: 25px;
+            margin-bottom: 0px;
+        }
+
+        &:nth-child(3) {
+            padding-bottom: 40px;
+            margin-bottom: 0px;
+        }
+        &:nth-child(4) {
+            padding-bottom: 0px;
+        }
+        &:nth-child(5) {
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+    }
+
+    &:nth-child(2) {
+        &::before {
+            // Для Планшета
+            @media (min-width: 768px) {
+                position: absolute;
+                content: "";
+                right: 35px;
+                top: -77px;
+                bottom: 0px;
+                width: 4px;
+                height: 57px;
+                border-radius: 2px;
+                background-color: #e1eef4;
+            }
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        left: 33px;
+        top: 94px;
+        bottom: 0px;
+        width: 4px;
+        border-radius: 2px;
+        background-color: #e1eef4;
+    }
+
+    &:last-child {
+        margin-bottom: 0px;
+        &::after {
+            background-color: transparent;
+        }
+        // Для Планшета
+        @media (min-width: 768px) {
+            background-color: transparent;
+        }
+    }
+}
+
+.works-algoritm__item:nth-child(even) {
+    // Для Планшета
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+        text-align: right;
+
+        .works-algoritm__item-text {
+            padding-right: 30px;
+            padding-top: 24px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            right: 35px;
+            left: unset;
+            top: 94px;
+            bottom: 10px;
+            width: 4px;
+            border-radius: 2px;
+            background-color: #e1eef4;
+        }
+
+        &:last-child { 
+            &:after {
+                background-color: transparent;
+            }
+        }
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        .works-algoritm__item-text {
+            padding-right: 45px;
+            padding-bottom: 48px;
+        }
+    }
+}
+
+.works-algoritm__item:nth-child(odd) {
+    // Для Планшета
+    @media (min-width: 768px) {
+        margin-left: auto;
+
+        .works-algoritm__item-text {
+            padding-left: 30px;
+            padding-top: 23px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            right: unset;
+            left: 35px;
+            top: 94px;
+            bottom: 16px;
+            width: 4px;
+            border-radius: 2px;
+            background-color: #e1eef4;
+        }
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        .works-algoritm__item-text {
+            padding-left: 45px;
+            padding-bottom: 38px;
+
+            &:nth-child(5){
+                padding-bottom: 0px;
+                margin-bottom: -10px;
+            }
+        }
+    }
+}
+
+.works-algoritm__item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /*св-во не дает ужиматься блоку*/
+    width: 74px;
+    height: 74px;
+    
+    border-radius: 28px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 35px 0px rgba(0, 112, 187, 0.35); 
+}
+
+.works-algoritm__item-text {
+    padding-left: 25px;
+    // Для Планшета
+    @media (min-width: 768px) {
+        padding-left: 0;
+    }
+
+    h4 {
+        margin-bottom: 10px;
+        line-height: 1.2;
+            // Для Планшета
+        @media (min-width: 768px) {
+            margin-bottom: 8px;
+        }
+
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            
+        }
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.45;
+        margin-bottom: 5px; 
+
+        // Для Планшета
+        @media (min-width: 768px) {
+            font-size: 16px;
+            line-height: 1.35;
+            margin-bottom: 9px;
+        }
+
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            font-size: 18px;
+            margin-bottom: 10px; 
+            line-height: 1.2;
+        }
+    }
+
+    .item-text {
+        font-weight: 700;
+        // Для Планшета
+        @media (min-width: 768px) {
+            font-size: 18px;
+        }
+
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            
+        }
+    }
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 
     <title>Project Porfolio</title>
     <link rel="stylesheet" href="./css/main.css">
@@ -108,7 +109,7 @@
 
     <main>
         <!-- section_portfolio -->
-        <section class="section_portfolio">
+        <section class="section_portfolio none">
             <div class="container">
                 <h2><span class="section-title">Портфолио</span></h2>
                 <div class="portfolio-works">
@@ -179,7 +180,76 @@
             </div>
         </section>
         <!-- //section_portfolio -->
+        <section class="section_how-i-work">
+            <div class="container">
+                <div class="works-algoritm">
+                    <h2><span class="section-title">Как я работаю</span></h2>
+                    <div class="works-algoritm__item">
+                        <div class="works-algoritm__item-icon">
+                            <img src="./img/icons/how-i-work-1.png" alt="Оцениваю макет">
+                        </div>
+                        <div class="works-algoritm__item-text animate__animated animate__fadeInLeft">
+                            <h4><span class="title-little">Оцениваю макет</span></h4>
+                            <p>Оцениваю объем работы, сложность, 
+                                нюансы. Задаю вопросы.</p>
+                            <p class="item-text">Время: 2 - 4 часа</p>
+                        </div>
+                    </div>
+
+                    <div class="works-algoritm__item">
+                        <div class="works-algoritm__item-icon">
+                            <img src="./img/icons/how-i-work-2.png" alt="ТЗ, смета и график работ">
+                        </div>
+                        <div class="works-algoritm__item-text animate__animated animate__fadeInRight animate__slow">
+                            <h4><span class="title-little">ТЗ, смета и график работ</span></h4>
+                            <p>Согласовываем техническое задание и график работ по проекту. Осмечиваю стоимость по этапам работы.</p>
+                            <p class="item-text">Время: 2 - 4 часа</p>
+                        </div>
+                    </div>
+
+                    <div class="works-algoritm__item">
+                        <div class="works-algoritm__item-icon">
+                            <img src="./img/icons/how-i-work-3.png" alt="Вы держите руку на пульсе">
+                        </div>
+                        <div class="works-algoritm__item-text animate__animated animate__fadeInLeft animate__slower">
+                            <h4><span class="title-little">Вы держите руку &shy; на пульсе</span></h4>
+                            <p>Выдаю клиенту доступ к GitHub репозиторию и доске Trello. Вы в любое время можете видеть актуальное состояние проекта и задач.</p>
+                            <p class="item-text">Время: 2 часа</p>
+                        </div>
+                    </div>
+
+                    <div class="works-algoritm__item">
+                        <div class="works-algoritm__item-icon">
+                            <img src="./img/icons/how-i-work-4.png" alt="Выполняю каждый этап">
+                        </div>
+                        <div class="works-algoritm__item-text animate__animated animate__fadeInRight animate__slower">
+                            <h4><span class="title-little">Выполняю каждый этап</span></h4>
+                            <p>Поочередно выполняю каждый этап 
+                                работы. Передаю результаты. Заказчик 
+                                производит поэтапную оплату.</p>
+                            <p class="item-text">Время: 2 - 4 часа</p>
+                        </div>
+                    </div>
+
+                    <div class="works-algoritm__item">
+                        <div class="works-algoritm__item-icon">
+                            <img src="./img/icons/how-i-work-5.png" alt="Финальное ревью проекта">
+                        </div>
+                        <div class="works-algoritm__item-text animate__animated animate__fadeInLeft animate__slower">
+                            <h4><span class="title-little">Финальное ревью проекта</span></h4>
+                            <p>Проект готов. Финальное ревью и полировка 
+                                до идеального состояния. Передаю файлы 
+                                проекта, заливаю сайт на хостинг заказчика.</p>
+                            <p class="item-text">Время: 2 - 4 часа</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+
     <script src="libs/jquery/jquery-3.5.0.min.js"></script>
     <script src="https://use.fontawesome.com/5071d729ba.js"></script>
     <script src="./libs/mixitup-3/mixitup.min.js"></script>
