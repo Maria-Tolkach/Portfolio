@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <!--Animation-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
-
-    <title>Project Porfolio</title>
+    <title>Porfolio Tolkach</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -180,15 +180,17 @@
             </div>
         </section>
         <!-- //section_portfolio -->
-        <section class="section_how-i-work">
+        <!-- section_how-i-work -->
+        <section class="section_how-i-work none">
             <div class="container">
+                <!-- works-algoritm -->
                 <div class="works-algoritm">
                     <h2><span class="section-title">Как я работаю</span></h2>
                     <div class="works-algoritm__item">
                         <div class="works-algoritm__item-icon">
                             <img src="./img/icons/how-i-work-1.png" alt="Оцениваю макет">
                         </div>
-                        <div class="works-algoritm__item-text animate__animated animate__fadeInLeft">
+                        <div class="works-algoritm__item-text animate__animated animate__fadeInLeft wow">
                             <h4><span class="title-little">Оцениваю макет</span></h4>
                             <p>Оцениваю объем работы, сложность, 
                                 нюансы. Задаю вопросы.</p>
@@ -200,7 +202,7 @@
                         <div class="works-algoritm__item-icon">
                             <img src="./img/icons/how-i-work-2.png" alt="ТЗ, смета и график работ">
                         </div>
-                        <div class="works-algoritm__item-text animate__animated animate__fadeInRight animate__slow">
+                        <div class="works-algoritm__item-text animate__animated animate__fadeInRight animate__slow wow">
                             <h4><span class="title-little">ТЗ, смета и график работ</span></h4>
                             <p>Согласовываем техническое задание и график работ по проекту. Осмечиваю стоимость по этапам работы.</p>
                             <p class="item-text">Время: 2 - 4 часа</p>
@@ -211,7 +213,7 @@
                         <div class="works-algoritm__item-icon">
                             <img src="./img/icons/how-i-work-3.png" alt="Вы держите руку на пульсе">
                         </div>
-                        <div class="works-algoritm__item-text animate__animated animate__fadeInLeft animate__slower">
+                        <div class="works-algoritm__item-text animate__animated animate__fadeInLeft animate__slower wow">
                             <h4><span class="title-little">Вы держите руку &shy; на пульсе</span></h4>
                             <p>Выдаю клиенту доступ к GitHub репозиторию и доске Trello. Вы в любое время можете видеть актуальное состояние проекта и задач.</p>
                             <p class="item-text">Время: 2 часа</p>
@@ -222,7 +224,7 @@
                         <div class="works-algoritm__item-icon">
                             <img src="./img/icons/how-i-work-4.png" alt="Выполняю каждый этап">
                         </div>
-                        <div class="works-algoritm__item-text animate__animated animate__fadeInRight animate__slower">
+                        <div class="works-algoritm__item-text animate__animated animate__fadeInRight animate__slower wow">
                             <h4><span class="title-little">Выполняю каждый этап</span></h4>
                             <p>Поочередно выполняю каждый этап 
                                 работы. Передаю результаты. Заказчик 
@@ -235,7 +237,7 @@
                         <div class="works-algoritm__item-icon">
                             <img src="./img/icons/how-i-work-5.png" alt="Финальное ревью проекта">
                         </div>
-                        <div class="works-algoritm__item-text animate__animated animate__fadeInLeft animate__slower">
+                        <div class="works-algoritm__item-text animate__animated animate__fadeInLeft animate__slower wow">
                             <h4><span class="title-little">Финальное ревью проекта</span></h4>
                             <p>Проект готов. Финальное ревью и полировка 
                                 до идеального состояния. Передаю файлы 
@@ -244,12 +246,78 @@
                         </div>
                     </div>
                 </div>
+                <!-- //works-algoritm -->
             </div>
         </section>
+        <!-- //section_how-i-work -->
+        <!-- contacts -->
+        <section class="contacts">
+            <div class="container">
+                <div class="my-contacts">
+                    <h2><span class="section-title">Контакты</span></h2>
+                    <div class="row contacts-row">
+                        <div class="contacts__left">
+                            <p class="contacts__left-text">Если вы ищите специалиста по верс&shy;тке сайтов, front-end разработчика в команду или для работы над проек&shy;том &mdash; напишите мне.</p>
+                            <div class="contacts__left-details">
+                                <div class="row left-details">
+                                    <p class="details-name">Email</p>
+                                    <a class="details-value" href="mailto:marry.tolkach@gmail.com">marry.tolkach@gmail.com</a>
+                                </div>
+                                <div class="row left-details">
+                                    <p class="details-name">Skype</p>
+                                    <a class="details-value" href="#">maria-tolkach</a>
+                                </div>
+                                <div class="row left-details">
+                                    <p class="details-name">Телефон</p>
+                                    <div class="details-value" href="#">+7 (980) 123-45-67</div>
+                                </div>
+                                <div class="row left-details">
+                                    <p class="details-name">Адрес</p>
+                                    <div class="details-value" href="#">Россия, Москва</div>
+                                </div>
+                            </div>
+                            <ul class="row social-icons">
+                                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                                <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="contacts__right">
+                            <form class="contacts-card">
+                                <div class="contacts-card__item">
+                                    <input class="card-field" type="text" name="email">
+                                    <span class="fake-placeholder">Ваш Email</span>
+                                </div>
+                                <div class="contacts-card__item">
+                                    <input class="card-field" type="text" name="theme">
+                                    <span class="fake-placeholder">Тема письма</span>
+                                </div>
+                                <div class="contacts-card__item">
+                                    <textarea class="card-field" type="message"></textarea>
+                                    <span class="fake-placeholder"><p>Сообщение</p></span>
+                                </div>
+                                <div class="contacts-card__item">
+                                    <button class="yellow-button contacts__yellow-button" type="submit">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //contacts -->
     </main>
-    <script src="js/wow.min.js"></script>
+    <footer>
+        <div class="container">
+            <h5 class="footer__name">© 2020 &mdash; Мария Толкач</h5>
+            <p class="footer__text">Веб-разработик из Праги, занима&shy;юсь версткой и созданием сайтов. <br> Этот сайт сделала в рамках прохождения обучения по верстке на курсах от&nbsp;<a href="https://webcademy.ru/" target="_blank" class="footer__link">WebCademy.ru</a></p>
+        </div>
+    </footer>
+    <!--Animation-->
+    <script src="./js/wow.min.js"></script>
     <script>new WOW().init();</script>
-
+    <!--//Animation-->
     <script src="libs/jquery/jquery-3.5.0.min.js"></script>
     <script src="https://use.fontawesome.com/5071d729ba.js"></script>
     <script src="./libs/mixitup-3/mixitup.min.js"></script>

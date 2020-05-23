@@ -9,12 +9,14 @@ html, body {
     color: rgb(0, 0, 0);
     transition: 0.5s;
     scroll-behavior: smooth;
+    &::selection {background-color: #fbdc4d;}
 }
 
 a {
     text-decoration: none;
     cursor: pointer;
     color: black;
+    outline: none;
 }
 
 ul {
@@ -26,7 +28,10 @@ ul {
 h1, h2, h3, h4, h5, h6, p {
     margin: 0px;
     padding: 0px;
+    &::selection {background-color: #fbdc4d;}
 }
+
+span {&::selection {background-color: #fbdc4d;}}
 
 img {
     max-width: 100%;
@@ -68,7 +73,7 @@ button, input {
     padding-right: 15px;
 
     @media (min-width: 320px) {
-        max-width: 320px;
+        // max-width: 320px;
     }
 
     // Для Планшета
@@ -132,7 +137,20 @@ button, input {
     }
 }
 
-.column{
+.row-reverse {
+    flex-direction: column;
+    flex-direction: column-reverse;
+    // Для Планшета
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        justify-content: space-between;
+    }
+}
+
+.column {
     flex-direction: column;
     align-items: baseline;
 
@@ -147,25 +165,13 @@ button, input {
     }
 }
 
-.row-reverse {
-    flex-direction: column;
-    flex-direction: column-reverse;
-    // Для Планшета
-    @media (min-width: 768px) {
-        flex-direction: row;
-    }
-    // Для Десктопа
-    @media (min-width: 1200px) {
-        justify-content: space-between;
-    }
-}
-
 .yellow-button {
     display: inline-block;
     padding: 15px 42px 17px;
     font-family: "Mplus 1p";
     font-size: 22px;
     font-weight: 700;
+    border: none;
     border-radius: 31px;
     background-color: #fbdc4d;
     z-index: 1;

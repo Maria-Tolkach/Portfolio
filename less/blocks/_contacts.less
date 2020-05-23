@@ -1,0 +1,361 @@
+.contacts {
+    position: relative;
+    padding: 60px 0 60px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: #f4f8f9;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        padding: 90px 0 69px;
+    }
+    
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        padding: 140px 0 150px;
+
+        background-image: url("../img/bg/contact-line.jpg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: repeat;
+    }
+}
+
+.contacts::before {
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        position: absolute;
+        content: "";
+        top: 316px;
+        left: -115px;
+        width: 280px;
+        height: 243px;
+        background-image: url("../img/bg/BG-contacts.png");
+        background-repeat: no-repeat;
+    }
+}
+
+.contacts::after {
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        position: absolute;
+        content: "";
+        top: 289px;
+        left: -137px;
+        width: 448px;
+        height: 280px;
+        background-image: url("../img/bg/Dot_Feature-contacts.png");
+    }
+}
+
+.my-contacts {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        max-width: unset;
+        width: 708px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        max-width: unset;
+        width: unset;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 37px;
+
+        // Для Планшета
+        @media (min-width: 768px) {
+            margin-bottom: 61px;
+            padding-left: 31px;
+        }
+
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            margin-bottom: 56px;
+            padding-left: 0;
+        }
+    }
+}
+
+.contacts-row {
+    flex-direction: column;
+    // Для Планшета
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.contacts__left {
+    max-width: 502px;
+    margin-bottom: 41px;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        width: 45%;
+        margin-bottom: 0;
+        margin-top: -8px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        width: 50%;
+        max-width: 502px;
+        padding-top: 20px;
+        margin-top: 0;
+    }
+}
+
+.contacts__left-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.63;
+    margin-bottom: 21px;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        font-size: 18px;
+        line-height: 1.56;
+        margin-bottom: 30px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 41px;
+    }
+}
+
+.contacts__left-details{
+    // Для Планшета
+    @media (min-width: 768px) {
+        min-width: 340px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        max-width: 468px;
+    }
+}
+
+.left-details {
+    margin-bottom: 11px;
+    flex-direction: column;
+    
+    // Для Планшета
+    @media (min-width: 768px) {
+        margin-bottom: 12px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        margin-bottom: 22px;
+        flex-direction: row;
+    }
+    a {color: #039be5;}
+}
+
+.details-name {
+    font-family: "Mplus 1p";
+    font-size: 18px;
+    font-weight: 700;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        width: 197px;
+        font-size: 20px;
+    }
+}
+
+.details-value {
+    color: #96969d;
+    font-family: "Mplus 1p";
+    font-size: 18px;
+    font-weight: 500;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        font-size: 20px;
+    }
+}
+
+.contacts__right {
+    max-width: 395px;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        width: 48%; 
+        max-width: unset;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        width: 45%; 
+        margin-right: 20px;
+    }
+}
+
+.contacts-card {
+    padding: 54px 15px 40px;
+    background-color: white;
+    box-shadow: 0 28px 40px #c2dbeb;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        padding: 54px 15px 40px 22px;
+        background-color: white;
+        box-shadow: 0px 28px 80px 0px #c2dbeb; 
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        padding: 79px 60px 39px 60px;
+        background-color: white;
+        box-shadow: 0 28px 100px #c2dbeb;
+    }
+}
+
+.contacts-card__item {
+    position: relative;
+    margin-bottom: 42px;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        margin-bottom: 61px;
+    }
+
+    &:nth-child(2) {margin-bottom: 40px;}
+    &:nth-child(3) {
+        margin-bottom: 14px;
+        // Для Планшета
+        @media (min-width: 768px) {
+            margin-bottom: 14px;
+        }
+
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            margin-bottom: 34px;
+        }
+    }
+    &:last-child {margin-bottom: 0;}
+
+    textarea, input {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 100%; 
+        height: 44px;
+        border: 0px;
+        border-bottom: 2px solid #eaeaea;
+        font-size: 20px;
+        font-weight: 700;
+        outline: none;
+        resize: none;
+
+        &:active, &:focus {
+            border-color: #ea736d;
+        }
+    }
+    textarea {
+        height: 122px;
+        // Для Планшета
+        @media (min-width: 768px) {
+
+        }
+
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            height: 133px;
+        }
+    }
+}
+
+.contacts__yellow-button {
+    padding: 11px 76px 13px;
+    font-size: 20px;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        padding: 11px 90px 13px;
+        font-size: 20px;
+        margin-left: 4px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        margin-left: 0;
+        font-size: 22px;
+        padding: 15px 42px 17px;
+    }
+}
+
+.card-field {
+
+}
+
+.fake-placeholder {
+    position: absolute;
+    bottom: 10px;
+    left: 2px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #bcbcbc;
+    pointer-events: none; /*Чтобы какой-то элемент сделать невиддимым при клике*/
+    transition: 0.5s;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        bottom: 10px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        bottom: 10px;
+    }
+
+
+    p {
+        margin-bottom: 85px;
+        // // Для Планшета
+        // @media (min-width: 768px) {
+
+        // }
+
+        // // Для Десктопа
+        // @media (min-width: 1200px) {
+        //     margin-bottom: 85px;
+        // }
+    }
+}
+
+.active {
+    top: -20px;
+    font-size: 16px;
+    color: #ed9626;
+    transition: 0.5s;
+}

@@ -40,4 +40,20 @@ $(document).ready(function () {
         /*8*/overlay.classList.remove('active');
         logo.classList.toggle('active');
    })
+
+   //fake-placeholder .fake-placeholder
+   const formInputs = document.querySelectorAll('.card-field');
+   for(let item of formInputs){
+       const inputPlacegolder = item.nextElementSibling;
+       item.addEventListener ('click', function(){
+            inputPlacegolder.classList.add('active');
+       })
+       //Если мой элемент (импут) имеет такое событие как blur пусть в этом случае выполняется функция, которая проверяет сначала 
+       //если мой этот импут если у него value (то что пользователь ввел) равен пустоте "", в этом случае удалить этот класс эктив у inputplaceholdera мы add меняем на remove
+       item.addEventListener('blur', function (){
+           if (this.value == ''){
+               inputPlacegolder.classList.remove('active');
+           }
+       })
+   }
 })
