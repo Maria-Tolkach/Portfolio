@@ -181,7 +181,6 @@
         a {margin-right: 20px;}
         a:last-child {margin-right: 0;}
     }
-
 }
 
 .person-foto {
@@ -205,10 +204,6 @@
     
     // Для Десктопа
     @media (min-width: 1200px) {
-        // padding-top: 24px;
-        // padding-left: 100px;
-        // max-width: unset;
-        // max-height: unset;
         padding-left: 0;
         max-width: 460px;
         max-height: 411px;
@@ -227,14 +222,6 @@
             z-index: -1;
             transition: 0.5s;
         }
-        
-        // // Для Десктопа
-        // @media (min-width: 1200px) {
-        //     top: 35%;
-        //     left: 25%;
-        //     width: 100%;
-        //     height: 100%;
-        // }
     }   
 }
 
@@ -273,14 +260,13 @@
     // Для Планшета
     @media (min-width: 768px) {
         max-width: 320px;
-        margin-top: 12px;
-        margin-right: 48px;
+        margin-top: 6px;
+        // margin-right: 48px;
         font-weight: 400;
     }
 
     // Для Десктопа
     @media (min-width: 1200px) {
-        // margin-right: 204px;
         margin-top: -11px;
         font-size: 24px;
         line-height: 1.6;
@@ -372,6 +358,11 @@
 .skills-button{
     display: none;
 
+    @media (min-width: 1024px) {
+        display: block;
+        margin-top: 37px;
+    }
+
     // Для Десктопа
     @media (min-width: 1200px) {
         display: block;
@@ -386,6 +377,7 @@
     // Для Планшета
     @media (min-width: 768px) {
         margin-top: 0px;
+        margin-right: 47px;
     }
     
     // Для Десктопа

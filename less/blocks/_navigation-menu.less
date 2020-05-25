@@ -144,10 +144,16 @@
     justify-content: center;
     align-items: center;
     height: 25px;
-    padding-right: 7px;
-    margin-top: -12px;
+    padding-right: 19px;
     cursor: pointer;
     z-index: 2;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        padding-top: 14px;
+        padding-right: 33px;
+        margin-top: -12px;
+    }
 
     // Для Десктопа
     @media (min-width: 1200px) {
@@ -195,10 +201,14 @@
 
     li {margin-right: 17px;}
 
-    a:active {box-shadow: none;
-    color: black;}
-    a:focus {box-shadow: none;
-        color: black;}
+    a:active {
+        box-shadow: none;
+        color: black;
+    }
+    a:focus {
+        box-shadow: none;
+        color: black;
+    }
     a {box-shadow: none;}
     // Для Десктопа
     @media (min-width: 1200px) {

@@ -36,6 +36,7 @@ span {&::selection {background-color: #fbdc4d;}}
 img {
     max-width: 100%;
     vertical-align: top;
+    overflow: hidden;
 }
 
 button, input {
@@ -71,10 +72,6 @@ button, input {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-
-    @media (min-width: 320px) {
-        // max-width: 320px;
-    }
 
     // Для Планшета
     @media (min-width: 768px) {
@@ -159,6 +156,13 @@ button, input {
         flex-direction: row;
         justify-content: space-between;
     }
+
+    // Для Планшета
+    @media (min-width: 1000px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
     // Для Десктопа
     @media (min-width: 1200px) {
         justify-content: space-between;

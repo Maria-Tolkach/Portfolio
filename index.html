@@ -11,8 +11,7 @@
 </head>
 <body>
     <div id="overlay"></div>
-    <!-- header -->
-    <header class="header none">
+    <header class="header">
         <!-- header_top-menu -->
         <div class="header_top-menu">
             <a class="logo" href="index.html">MT</a>
@@ -105,11 +104,9 @@
         </div>
         <!-- //container -->
     </header>
-    <!-- //header -->
-
     <main>
         <!-- section_portfolio -->
-        <section class="section_portfolio none">
+        <section class="section_portfolio">
             <div class="container">
                 <h2><span class="section-title">Портфолио</span></h2>
                 <div class="portfolio-works">
@@ -181,7 +178,7 @@
         </section>
         <!-- //section_portfolio -->
         <!-- section_how-i-work -->
-        <section class="section_how-i-work none">
+        <section class="section_how-i-work">
             <div class="container">
                 <!-- works-algoritm -->
                 <div class="works-algoritm">
@@ -190,7 +187,7 @@
                         <div class="works-algoritm__item-icon">
                             <img src="./img/icons/how-i-work-1.png" alt="Оцениваю макет">
                         </div>
-                        <div class="works-algoritm__item-text animate__animated animate__fadeInLeft wow">
+                        <div class="works-algoritm__item-text animate__animated animate__fadeInLeft animate__slow wow">
                             <h4><span class="title-little">Оцениваю макет</span></h4>
                             <p>Оцениваю объем работы, сложность, 
                                 нюансы. Задаю вопросы.</p>
@@ -256,6 +253,7 @@
                 <div class="my-contacts">
                     <h2><span class="section-title">Контакты</span></h2>
                     <div class="row contacts-row">
+                        <!-- contacts__left -->
                         <div class="contacts__left">
                             <p class="contacts__left-text">Если вы ищите специалиста по верс&shy;тке сайтов, front-end разработчика в команду или для работы над проек&shy;том &mdash; напишите мне.</p>
                             <div class="contacts__left-details">
@@ -283,8 +281,15 @@
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             </ul>
                         </div>
+                        <!-- //contacts__left -->
+                        <!-- contacts__right -->
                         <div class="contacts__right">
-                            <form class="contacts-card">
+                            <form class="contacts-card" action="" id="contacts-card">
+                                <!-- Если импуту задать типа hidden, то он будет скрыт -->
+                                <input type="hidden" name="project_name" value="index">
+                                <input type="hidden" name="admin_email" value="marry.tolkach@gmail.com">
+                                <input type="hidden" name="email_from" value="info@index">
+
                                 <div class="contacts-card__item">
                                     <input class="card-field" type="text" name="email">
                                     <span class="fake-placeholder">Ваш Email</span>
@@ -294,14 +299,16 @@
                                     <span class="fake-placeholder">Тема письма</span>
                                 </div>
                                 <div class="contacts-card__item">
-                                    <textarea class="card-field" type="message"></textarea>
+                                    <textarea class="card-field" name="message"></textarea>
                                     <span class="fake-placeholder"><p>Сообщение</p></span>
                                 </div>
                                 <div class="contacts-card__item">
                                     <button class="yellow-button contacts__yellow-button" type="submit">Отправить</button>
                                 </div>
                             </form>
+                            <div id="answer"></div>
                         </div>
+                        <!-- //contacts__right -->
                     </div>
                 </div>
             </div>
@@ -311,7 +318,7 @@
     <footer>
         <div class="container">
             <h5 class="footer__name">© 2020 &mdash; Мария Толкач</h5>
-            <p class="footer__text">Веб-разработик из Праги, занима&shy;юсь версткой и созданием сайтов. <br> Этот сайт сделала в рамках прохождения обучения по верстке на курсах от&nbsp;<a href="https://webcademy.ru/" target="_blank" class="footer__link">WebCademy.ru</a></p>
+            <p class="footer__text">Веб-разработчик из Праги, занима&shy;юсь версткой и созданием сайтов. <br> Этот сайт сделала в рамках прохождения обучения по верстке на курсах от&nbsp;<a href="https://webcademy.ru/" target="_blank" class="footer__link">WebCademy.ru</a></p>
         </div>
     </footer>
     <!--Animation-->
@@ -320,7 +327,11 @@
     <!--//Animation-->
     <script src="libs/jquery/jquery-3.5.0.min.js"></script>
     <script src="https://use.fontawesome.com/5071d729ba.js"></script>
-    <script src="./libs/mixitup-3/mixitup.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="./libs/jquery/mixitup-3/mixitup.min.js"></script>
+    <!-- отправка формы с сайта -->
+    <script src="./libs/jquery.validate/jquery.validate.js"></script>
+    <!-- //отправка формы с сайта -->
+    <script src="./js/gamburger.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
