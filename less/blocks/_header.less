@@ -69,7 +69,7 @@
         z-index: -1;
         width: 0%;
         border-radius: 50%;
-        background-color: #fbdc4d;
+        background-color:rgba(148, 214, 186, 0.5);
         transition: 0.5s;
     } 
     a:hover:after {
@@ -155,7 +155,9 @@
     left: -5px;
     right: -5px;
     height: 12px; 
-    background-color: #fbdc4d;
+    // background-color: #fbdc4d;
+    background-color: rgb(148, 214, 186);
+    // background-color: #01afb0;
     z-index: -1;
     
     // Для Планшета
@@ -188,15 +190,20 @@
     transition: 0.5s;
     margin: auto;
     transform: scaleY(1.13);
-    padding-top: 9px;
-    max-width: 330px;
-    max-height: 330px;
+    margin-top: 9px;
+    max-width: 280px;
+    max-height: 280px;
+    overflow: hidden;
+    transform: scale(1);
+    border-radius: 50%;
     
     // Для Планшета
     @media (min-width: 768px) {
+        max-width: 330px;
+        max-height: 330px;
         position: relative;
-        padding-top: 0px;
-        padding-left: 37px;
+        margin-top: 0px;
+        // padding-left: 37px;
         width: 48%;
         transform: scale(1);
         margin: unset;
@@ -206,23 +213,24 @@
     @media (min-width: 1200px) {
         padding-left: 0;
         max-width: 460px;
-        max-height: 411px;
+        max-height: 460px;
+        // max-height: 411px;
     }
 
-    &::after {
-        // Для Планшета
-        @media (min-width: 768px) {
-            position: absolute;
-            content: "";
-            top: 35%;
-            left: 25%;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(244,248,249,0.5);
-            z-index: -1;
-            transition: 0.5s;
-        }
-    }   
+    // &::after {
+    //     // Для Планшета
+    //     @media (min-width: 768px) {
+    //         position: absolute;
+    //         content: "";
+    //         top: 35%;
+    //         left: 25%;
+    //         width: 100%;
+    //         height: 100%;
+    //         background-color: rgba(244,248,249,0.5);
+    //         z-index: -1;
+    //         transition: 0.5s;
+    //     }
+    // }   
 }
 
 .header_img-bg {

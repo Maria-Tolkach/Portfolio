@@ -12,7 +12,7 @@ $(document).ready(function () {
    const formInputs = document.querySelectorAll('.card-field');
    for(let item of formInputs){
        const inputPlacegolder = item.nextElementSibling;
-       item.addEventListener ('click', function(){
+       item.addEventListener ('focus', function(){
             inputPlacegolder.classList.add('contacts-active');
        })
        //Если мой элемент (импут) имеет такое событие как blur пусть в этом случае выполняется функция, которая проверяет сначала 

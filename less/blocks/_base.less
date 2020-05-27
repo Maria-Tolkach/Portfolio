@@ -9,7 +9,6 @@ html, body {
     color: rgb(0, 0, 0);
     transition: 0.5s;
     scroll-behavior: smooth;
-    &::selection {background-color: #fbdc4d;}
 }
 
 a {
@@ -17,6 +16,7 @@ a {
     cursor: pointer;
     color: black;
     outline: none;
+    &::selection {background-color: #e7f5dc;}
 }
 
 ul {
@@ -24,14 +24,15 @@ ul {
     padding: 0px;
     list-style-type: none;
 }
+li, k, w {&::selection {background-color: #e7f5dc;}}
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0px;
     padding: 0px;
-    &::selection {background-color: #fbdc4d;}
+    &::selection {background-color: #e7f5dc;}
 }
 
-span {&::selection {background-color: #fbdc4d;}}
+span {&::selection {background-color: #e7f5dc;}}
 
 img {
     max-width: 100%;
@@ -67,11 +68,16 @@ button, input {
 .none {display: none;}
 
 .container {
-    max-width: 1140px;
+    max-width: 320px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+
+    // Для Планшета
+    @media (min-width: 420px) {
+        max-width: 1000px;
+    }
 
     // Для Планшета
     @media (min-width: 768px) {
@@ -116,7 +122,7 @@ button, input {
     left: -5px;
     right: -5px;
     height: 10px;
-    background-color: #fbdc4d;
+    background-color: rgb(148, 214, 186);
     z-index: -1;
 } 
 
@@ -150,11 +156,11 @@ button, input {
 .column {
     flex-direction: column;
     align-items: baseline;
-
+    
     // Для Планшета
     @media (min-width: 768px) {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     // Для Планшета
@@ -166,6 +172,7 @@ button, input {
     // Для Десктопа
     @media (min-width: 1200px) {
         justify-content: space-between;
+        align-items: start;
     }
 }
 
@@ -177,7 +184,7 @@ button, input {
     font-weight: 700;
     border: none;
     border-radius: 31px;
-    background-color: #fbdc4d;
+    background-color: rgb(148, 214, 186);
     z-index: 1;
     transition: 0.5s;
 }
@@ -185,7 +192,7 @@ button, input {
 .yellow-button:hover {
     transform: scale(1.05);
     border-radius: 31px;
-    box-shadow: 0 20px 20px -5px rgba(251, 219, 77, 0.4);
+    box-shadow: 0 20px 20px -5px rgba(148, 214, 186, 0.6);
     z-index: 1;
 }
 
@@ -196,7 +203,7 @@ button, input {
     font-size: 22px;
     font-weight: 700;
     border-radius: 32px;
-    border: 4px solid #464646;
+    border: 4px solid rgb(148, 214, 186);
     z-index: 1;
     transition: 0.5s;
 }
@@ -204,7 +211,7 @@ button, input {
 .button:hover {
     transform: scale(1.05);
     border-radius: 31px;
-    box-shadow: 0px 20px 15px -10px rgba(70, 70, 70, 0.3);
+    box-shadow: 0 20px 20px -5px rgba(148, 214, 186, 0.6);
     z-index: 1;
 }
 
@@ -232,7 +239,7 @@ button, input {
     left: -5px;
     right: -5px;
     height: 12px;
-    background-color: #fbdc4d;
+    background-color: rgb(148, 214, 186);
     z-index: -1;
 
     // Для Планшета
@@ -268,6 +275,7 @@ button, input {
         display: none;
     }
 }
+
 .title-little {
     position: relative;
     font-size: 20px;
@@ -292,9 +300,14 @@ button, input {
         bottom: 5px;
         left: 0px;
         right: 0px;
-        height: 7px;
-        background-color: #fbdc4d;
+        height: 0px;
+        background-color: rgb(148, 214, 186);
         z-index: -1;
     }
 } 
 
+.title-little:hover:after {
+    transition: height 0.5s;
+    height: 7px;
+    color: #ea655f;
+}

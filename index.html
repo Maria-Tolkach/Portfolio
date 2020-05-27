@@ -14,7 +14,9 @@
     <header class="header">
         <!-- header_top-menu -->
         <div class="header_top-menu">
-            <a class="logo" href="index.html">MT</a>
+            <!-- <div class="jm-logo"> -->
+                <a class="logo" href="index.html">MT</a>
+            <!-- </div> -->
             <div class="header-nav">
                 <div class="logo-nav" href="index.html">MT</div>
                 <a href="#">Главная</a>
@@ -44,7 +46,7 @@
         <!-- header_content -->
         <div class="header_content">
             <div class="container">
-                <div class="row row-reverse">
+                <div class="row row-reverse column">
                     <div class="person-info">
                         <h1><span class="name">Мария</span><br><span class="name">Толкач</span></h1>
                         
@@ -58,8 +60,8 @@
                         </div>
                         
                     </div>
-                    <div class="person-foto">
-                        <img src="./img/header/person-foto.jpg" alt="Tolkach Maria">
+                    <div class="person-foto jm-logo">
+                        <a href="#contacts"><img src="./img/header/my-circle-img.png" alt="Tolkach Maria"></a>
                     </div>
                 </div>
             </div>
@@ -123,7 +125,7 @@
                     <div class="row column">
                         <div class="portfolio_card mix frontend">
                             <a href="#" class="portfolio_big-card">
-                                <img src="./img/section-portfolio/img-1.jpg" alt="“Форест тревел”">
+                                <img src="./img/section-portfolio/forest-travel.jpg" alt="“Форест тревел”">
                                 <button class="card-button">Смотреть проект</button>
                             </a>
                             <a class="portfolio_card-description">Верстка &Prime;Форест тревел&Prime;</a>  
@@ -248,7 +250,7 @@
         </section>
         <!-- //section_how-i-work -->
         <!-- contacts -->
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="container">
                 <div class="my-contacts">
                     <h2><span class="section-title">Контакты</span></h2>
@@ -267,7 +269,7 @@
                                 </div>
                                 <div class="row left-details">
                                     <p class="details-name">Телефон</p>
-                                    <div class="details-value" href="#">+7 (980) 123-45-67</div>
+                                    <a class="details-value" href="tel:+420775511316">+(420) 77-55-11-316</a>
                                 </div>
                                 <div class="row left-details">
                                     <p class="details-name">Адрес</p>
@@ -286,7 +288,7 @@
                         <div class="contacts__right">
                             <form class="contacts-card" action="" id="contacts-card">
                                 <!-- Если импуту задать типа hidden, то он будет скрыт -->
-                                <input type="hidden" name="project_name" value="index">
+                                <input type="hidden" name="project_name" value="my-portfolio.ru">
                                 <input type="hidden" name="admin_email" value="marry.tolkach@gmail.com">
                                 <input type="hidden" name="email_from" value="info@index">
 

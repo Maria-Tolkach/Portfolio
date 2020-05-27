@@ -1,7 +1,6 @@
 .section_portfolio {
     padding: 51px 0 90px;
     background-color: #f4f8f9;
-    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -42,7 +41,7 @@
         font-size: 24px;
         border: none;
         background-color: transparent;
-        color: #8fa5ae;
+        color: #4b6154;
     }
 
     // Для Десктопа
@@ -52,8 +51,13 @@
         margin-right: 50px;
     }
 
-    &:focus, &:hover {
-        color: #000000;
+    &:hover, &:active{
+        color: #94d6ba;
+        font-weight: 800;
+    }
+
+    &:focus {
+        color: #9ed0a1;
         font-weight: 800;
     }
 }
@@ -140,6 +144,7 @@
     font-size: 22px;
     font-weight: 700;
     line-height: 1.1;
+    transition: 0.5s;
 
     // Для Планшета
     @media (min-width: 768px) {
@@ -149,6 +154,11 @@
     // Для Десктопа
     @media (min-width: 1200px) {
         font-size: 32px;
+    }
+    &:hover {
+        transition: 0.5s;
+        color: #94d6ba;
+        text-shadow: 11px 11px 12px rgba(83, 88, 85, 0.525), 0 0 1px #2db136;
     }
 }
 
@@ -190,10 +200,10 @@
     content: "";
     top: 0px;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
-    background-color: rgba(251, 220, 77, 0.851);
-    transition: 0.5s;
+    background-color: rgba(148, 214, 186, 0.753);
+    transition: 0.8s;
     transform: translateY(100%);
 }
 
@@ -223,7 +233,7 @@
     bottom: 0;
     left: 0;
     background-color: rgba(251, 220, 77, 0.851);
-    transition: 0.5s;
+    transition: 0.8s;
     transform: translateY(100%);
 }
 
@@ -236,29 +246,30 @@
     padding: 14px 30px 14px;
     border-radius: 52px;
     border-width: 3px;
-    border-color: rgb(255, 255, 255);
     border-style: solid;
+    border-color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
 
     font-size: 22px;
-    color: #ea736d;
+    color: rgb(75, 97, 84);
     font-weight: 800;
 
     transform: translate(-250%);
-    transition: 0.5s;
+    transition: 0.8s;
     display: block;
+    transition: 0.5s;
 
     &:hover {
-        background-color: rgb(234, 115, 109);
+        background-color: rgb(75, 97, 84);
         color: white;
-        border-color: rgb(234, 115, 109);
+        border-color: rgb(75, 97, 84);
         transition: 0.5s;
     }
 
     &:active {
-        background-color: rgb(212, 66, 59);
+        background-color: rgb(158, 208, 161);
         color: white;
-        border-color: rgb(212, 66, 59); 
+        border-color: rgb(158, 208, 161); 
         transition: 0.5s;
     }
 }
