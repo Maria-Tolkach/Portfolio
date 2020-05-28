@@ -1,25 +1,17 @@
 $(document).ready(function () {
 
-    // Фильтрация проектов
-    // let containerEl = document.querySelector('#portfolio-projects');
-    // let mixer = mixitup(containerEl,{
-    //     classNames: {
-    //         block: ""
-    //     }
-    // })
-
    //fake-placeholder
    const formInputs = document.querySelectorAll('.card-field');
    for(let item of formInputs){
-       const inputPlacegolder = item.nextElementSibling;
+       const inputPlaceholder = item.nextElementSibling;
        item.addEventListener ('focus', function(){
-            inputPlacegolder.classList.add('contacts-active');
+            inputPlaceholder.classList.add('contacts-active');
        })
        //Если мой элемент (импут) имеет такое событие как blur пусть в этом случае выполняется функция, которая проверяет сначала 
        //если мой этот импут если у него value (то что пользователь ввел) равен пустоте "", в этом случае удалить этот класс эктив у inputplaceholdera мы add меняем на remove
        item.addEventListener('blur', function (){
            if (this.value == ''){
-               inputPlacegolder.classList.remove('contacts-active');
+               inputPlaceholder.classList.remove('contacts-active');
            }
        })
    }
@@ -86,4 +78,24 @@ $(document).ready(function () {
        //Чтобы после submit ничего не выполнялось - делаем возврат false чтобы прервать цепочку срабатывания остальных функций
        return false;
    }
+
+   // page-nav__active -- боковая навигация
+   $('#page-nav').onePageNav({
+        currentClass: 'page-nav__active',
+        changeHash: false,
+        scrollSpeed: 750,
+        scrollTheshold: 0.5,
+        filter:'',
+   })
+
+   // back-top -- стрелка скролла к верху сайта
+   $('#back-top').hide(); // скрываем методом hide
+   $(window).scroll(function () { //если у моего окна, объекта виндоу, имеется скролл (есть такой метод), то пусть выполнится функция:
+        if($(this).scrollTop() > 200){ // если оно (окно) в данном случае имеет скролл тор, т.е. прокуртилось вверх, на значение более чем 200пикселей, в этом случае пусть
+            $('#back-top').fadeIn(); // наша кнопка back-top плавненько покажется fadeIn
+        }
+        else{  // в проиивном случае, 
+            $('#back-top').fadeOut(); // скрой мою кнопочку fadeOut
+        }
+   })
 })

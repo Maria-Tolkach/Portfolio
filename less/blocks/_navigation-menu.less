@@ -3,7 +3,7 @@
     top: 0;
     right: 0;
     background-color: rgb(255, 255, 255);
-    z-index: 1;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -44,7 +44,6 @@
     z-index: 1;
     margin-bottom: 22px;
     font-weight: 700;
-    // box-shadow: inset 0 -1px white, inset 0 -2px #000;
     
     // Для Десктопа
     @media (min-width: 1200px) {
@@ -240,4 +239,65 @@
     @media (min-width: 1200px) {
         display: none;
     }
+}
+
+#page-nav {
+    position: fixed;
+    right: 20px;
+    top: 60%;
+    z-index: 5;
+    // Для Планшета
+    @media (min-width: 768px) {
+        right: 20px;
+    }
+    
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        right: 90px;
+        top: 62%;
+    }
+}
+
+#page-nav li {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(148, 214, 186, 0.726);
+    border-radius: 50%;
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+#page-nav li a {
+    display: block;
+    height: 100%;
+    padding: 10px;
+}
+
+#page-nav li.page-nav__active::before {
+    color: #94d6ba;
+    font-family: 'FontAwesome';
+    content: '\f3a5';
+    transition: 0.5s;
+}
+
+#page-nav li.page-nav__active {
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+#back-top a {
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        position: fixed;
+        bottom: 16%;
+        left: 90px;
+        font-size: 60px;
+        color: rgba(100, 172, 143, 0.55);
+        transition: 0.5s;
+    }
+}
+
+#back-top a:hover {
+    color: rgb(90, 156, 130);
+    transition: 0.5s;
 }

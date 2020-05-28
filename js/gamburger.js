@@ -16,13 +16,15 @@ $(document).ready(function () {
    /*1*/const mobileMenuToggle = document.querySelector('.toggle-menu');
    /*2*/const mobMenu = document.querySelector('.header-nav');
    /*5*/const overlay = document.querySelector('#overlay');
-   const logo = document.querySelector('.logo')
+   const logo = document.querySelector('.logo');
+   const bodyElement = document.body;
 
    /*3*/mobileMenuToggle.addEventListener('click', function(){
        mobMenu.classList.toggle('active');
        /*4*/this.classList.toggle('active');
        /*6*/overlay.classList.toggle('active');
        logo.classList.toggle('active');
+       bodyElement.classList.toggle('nonscroll');
    })
 
    /*7*/window.addEventListener('resize', function(){
@@ -30,5 +32,6 @@ $(document).ready(function () {
         /*8*/mobileMenuToggle.classList.remove('active');
         /*8*/overlay.classList.remove('active');
         logo.classList.toggle('active');
+        bodyElement.classList.remove('nonscroll');
    })
 })

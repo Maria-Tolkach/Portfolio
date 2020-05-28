@@ -7,11 +7,27 @@
     <!--Animation-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <title>Porfolio Tolkach</title>
+    <link rel="shortcut icon" href="./img/icons/favicon-icon.png">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <ul id="page-nav">
+        <li class="page-nav__active">
+            <a href="#header"></a>
+        </li>
+        <li>
+            <a href="#section_portfolio"></a>
+        </li>
+        <li>
+            <a href="#section_how-i-work"></a>
+        </li>
+        <li>
+            <a href="#contacts"></a>
+        </li>
+    </ul>
+
     <div id="overlay"></div>
-    <header class="header">
+    <header class="header" id="header">
         <!-- header_top-menu -->
         <div class="header_top-menu">
             <!-- <div class="jm-logo"> -->
@@ -19,10 +35,10 @@
             <!-- </div> -->
             <div class="header-nav">
                 <div class="logo-nav" href="index.html">MT</div>
-                <a href="#">Главная</a>
-                <a href="#">Услуги</a>
-                <a href="#">Работы</a>
-                <a href="#">Контакты</a>
+                <a href="#header">Главная</a>
+                <a href="#scroll">Услуги</a>
+                <a href="#section_portfolio">Работы</a>
+                <a href="#contacts">Контакты</a>
                 <ul class="row social-icons social-icons-nav">
                     <li><a href="#"><i class="fa fa-github"></i></a></li>
                     <li><a href="#"><i class="fa fa-telegram"></i></a></li>
@@ -46,7 +62,7 @@
         <!-- header_content -->
         <div class="header_content">
             <div class="container">
-                <div class="row row-reverse column">
+                <div class="row row-reverse">
                     <div class="person-info">
                         <h1><span class="name">Мария</span><br><span class="name">Толкач</span></h1>
                         
@@ -56,7 +72,7 @@
 
                         <div class="row header-buttons">
                             <a href="#scroll" class="yellow-button">Познакомиться</a> 
-                            <a href="#" class="button">Контакты</a> 
+                            <a href="resume.jpg" class="button" download="resume-Tolkach">Скачать резюме</a> 
                         </div>
                         
                     </div>
@@ -87,7 +103,7 @@
                         <li><k>C</k><w>с</w> Bootstrap и без него.</li>
                     </ul>
                     <div class="skills-button">
-                    <a href="#" class="yellow-button">Смотреть работы</a>
+                    <a href="#section_portfolio" class="yellow-button">Смотреть работы</a>
                     </div>
                 </div>
                 <!-- //skills -->
@@ -108,43 +124,52 @@
     </header>
     <main>
         <!-- section_portfolio -->
-        <section class="section_portfolio">
+        <section class="section_portfolio" id="section_portfolio">
             <div class="container">
                 <h2><span class="section-title">Портфолио</span></h2>
-                <div class="portfolio-works">
+                <!-- <div class="portfolio-works">
                     <div class="portfolio-works-toggle">
                         <button class="portfolio-works__item control-active" data-filter="all">Все работы</button>
                         <button class="portfolio-works__item" data-filter=".boots">Bootstrap</button>
                         <button class="portfolio-works__item" data-filter=".wp">WordPress</button>
                         <button class="portfolio-works__item" data-filter=".frontend">Frontend</button>
                     </div>
-                </div>
+                </div> -->
                 <!-- potfolio-projects -->
                 <div id="portfolio-projects">
                     <!-- row -->
                     <div class="row column">
                         <div class="portfolio_card mix frontend">
-                            <a href="#" class="portfolio_big-card">
+                            <a href="http://maria-tolkach.zzz.com.ua/forest-travel-project/index.html"  target="_blank" class="portfolio_big-card">
                                 <img src="./img/section-portfolio/forest-travel.jpg" alt="“Форест тревел”">
                                 <button class="card-button">Смотреть проект</button>
                             </a>
-                            <a class="portfolio_card-description">Верстка &Prime;Форест тревел&Prime;</a>  
+                            <a href="http://maria-tolkach.zzz.com.ua/forest-travel-project/index.html"  target="_blank" class="portfolio_card-description">Верстка &Prime;Форест тревел&Prime;</a>  
                             <p>Верстка многостраничного сайта.</p>
                         </div>
                         <div class="portfolio_card mix frontend">
-                            <a href="#" class="portfolio_big-card">
-                                <img src="./img/section-portfolio/img-2.jpg" alt="Сайт для коворкинга “Мечта”">
+                            <a href="http://marry.zzz.com.ua/" target="_blank" class="portfolio_big-card">
+                                <img src="./img/section-portfolio/Unit.jpg" alt="Сайт “Юнит”">
                                 <button class="card-button">Смотреть проект</button>
                             </a>
-                            <a class="portfolio_card-description">Сайт для коворкинга &Prime;Мечта&Prime;</a>  
+                            <a href="http://marry.zzz.com.ua/" target="_blank" class="portfolio_card-description">Сайт &Prime;Юнит&Prime;</a>  
                             <p>Верстка лендинга.</p>
                         </div>
+                        
                     </div>
                     <!-- //row -->
                     <!-- row -->
-                    <div class="row column">
+                    <div class="row">
+                        <div class="portfolio_card mix frontend center">
+                            <a href="index.html" target="_blank" class="portfolio_big-card">
+                                <img src="./img/section-portfolio/portfolio.jpg" alt="Сайт “Portfolio”">
+                                <button class="card-button">Смотреть проект</button>
+                            </a>
+                            <a href="index.html" target="_blank" class="portfolio_card-description">Сайт &Prime;Portfolio&Prime;</a>  
+                            <p>Верстка лендинга.</p>
+                        </div>
                         <!-- portfolio_small-cards -->
-                        <div class="portfolio_small-cards mix boots">
+                        <!-- <div class="portfolio_small-cards mix boots">
                             <a href="#" class="portfolio_small-card">
                                 <img src="./img/section-portfolio/img-3.jpg" alt="“Форест тревел”">
                                 <button class="small-card__button">Смотреть проект</button>
@@ -167,20 +192,20 @@
                             </a>
                             <a class="portfolio_mini-card-description">Верстка &Prime;Мир Авто&Prime;</a>  
                             <p>Верстка многостраничного сайта.</p>
-                        </div>
+                        </div> -->
                         <!-- //portfolio_small-cards -->
                     </div>
                     <!-- //row -->
-                    <div class="link">
+                    <!-- <div class="link">
                         <span><a href="#">Смотреть все работы</a></span>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- //potfolio-projects -->
             </div>
         </section>
         <!-- //section_portfolio -->
         <!-- section_how-i-work -->
-        <section class="section_how-i-work">
+        <section class="section_how-i-work" id="section_how-i-work">
             <div class="container">
                 <!-- works-algoritm -->
                 <div class="works-algoritm">
@@ -273,7 +298,7 @@
                                 </div>
                                 <div class="row left-details">
                                     <p class="details-name">Адрес</p>
-                                    <div class="details-value" href="#">Россия, Москва</div>
+                                    <div class="details-value" href="#">Чехия, Прага</div>
                                 </div>
                             </div>
                             <ul class="row social-icons">
@@ -323,6 +348,12 @@
             <p class="footer__text">Веб-разработчик из Праги, занима&shy;юсь версткой и созданием сайтов. <br> Этот сайт сделала в рамках прохождения обучения по верстке на курсах от&nbsp;<a href="https://webcademy.ru/" target="_blank" class="footer__link">WebCademy.ru</a></p>
         </div>
     </footer>
+    <div id="back-top">
+        <a href="#top">
+            <i class="fas fa-angle-double-up"></i>
+        </a>
+    </div>
+
     <!--Animation-->
     <script src="./js/wow.min.js"></script>
     <script>new WOW().init();</script>
@@ -333,6 +364,10 @@
     <!-- отправка формы с сайта -->
     <script src="./libs/jquery.validate/jquery.validate.js"></script>
     <!-- //отправка формы с сайта -->
+    <!-- боковая навигация -->
+    <script src="./libs/nav.js/nav.js"></script>
+    <!-- //боковая навигация -->
+    <script src="https://kit.fontawesome.com/7220139ce0.js" crossorigin="anonymous"></script>
     <script src="./js/gamburger.js"></script>
     <script src="./js/main.js"></script>
 </body>

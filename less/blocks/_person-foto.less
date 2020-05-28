@@ -1,48 +1,63 @@
 .jm-logo {
-    padding: 25px;
-    transition: 0.5s;
+	// Для Планшета
+    @media (min-width: 768px) {
+		padding: 25px;
+		transition: 0.5s;
+    }
 }
 
 .jm-logo a {
-	transition: transform ease-out 0.4s, background 0.5s;
-	display: inline-block;
-	position: relative;
-	z-index: 1;
-	padding: 15px;
-    border-radius: 50%;
+	// Для Планшета
+	@media (min-width: 768px) {
+		transition: transform ease-out 0.4s, background 0.5s;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		padding: 15px;
+		border-radius: 50%;
+	}
 }
 
 .jm-logo a:hover {
-	background: rgba(90, 157, 52,0.2);
-	transform: scale(0.93);
+	// Для Планшета
+	@media (min-width: 768px) {
+		background: rgba(90, 157, 52,0.2);
+		transform: scale(0.93);
+	}
 }
 
 .jm-logo a:after {
-	pointer-events: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	content: '';
-	box-sizing: content-box;
-	top: 0;
-	left: 0;
-	padding: 0;
-	z-index: -1;
-	box-shadow: 0 0 0 5px rgba(91, 157, 52, 0.623);
-	filter: alpha(opacity=0);
-	opacity: 0;
-	transform: scale(0.9);
-	border-radius: 50%;
+	// Для Планшета
+	@media (min-width: 768px) {
+		pointer-events: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		content: '';
+		box-sizing: content-box;
+		top: 0;
+		left: 0;
+		padding: 0;
+		z-index: -1;
+		box-shadow: 0 0 0 5px rgba(91, 157, 52, 0.623);
+		filter: alpha(opacity=0);
+		opacity: 0;
+		transform: scale(0.9);
+		border-radius: 50%;
+	}
 }
 
 .jm-logo a:hover:after {
-    animation: sonarEffect 1.3s ease-out 80ms;
-    background:none;
-    background: rgba(72, 102, 55, 0.3);
+	// Для Планшета
+	@media (min-width: 768px) {
+		animation: sonarEffect 1.3s ease-out 80ms;
+		background:none;
+		background: rgba(72, 102, 55, 0.3);
+	}
 }
 
 @-o-keyframes sonarEffect {
-    0% {
+	0% {
 		filter: alpha(opacity=30);
 		opacity: 0.3;
 	}
@@ -75,7 +90,7 @@
 		transform: scale(1.2);
 		filter: alpha(opacity=0);
 		opacity: 0;
-    }
+	}
 }
 
 @keyframes sonarEffect {
@@ -93,5 +108,5 @@
 		transform: scale(1.2);
 		filter: alpha(opacity=0);
 		opacity: 0;
-    }
+	}
 }
