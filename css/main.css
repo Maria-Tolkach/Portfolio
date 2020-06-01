@@ -1134,7 +1134,7 @@ input {
   border-style: solid;
   border-color: #ffffff;
   background-color: #ffffff;
-  font-size: 22px;
+  font-size: 18px;
   color: #4b6154;
   font-weight: 800;
   -webkit-transform: translate(-250%);
@@ -1144,6 +1144,11 @@ input {
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+@media (min-width: 768px) {
+  .card-button {
+    font-size: 22px;
+  }
 }
 .card-button:hover {
   background-color: #4b6154;

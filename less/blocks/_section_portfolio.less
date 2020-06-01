@@ -247,7 +247,7 @@
     border-color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
 
-    font-size: 22px;
+    font-size: 18px;
     color: rgb(75, 97, 84);
     font-weight: 800;
 
@@ -255,6 +255,16 @@
     transition: 0.8s;
     display: block;
     transition: 0.5s;
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        font-size: 22px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+
+    }
 
     &:hover {
         background-color: rgb(75, 97, 84);
