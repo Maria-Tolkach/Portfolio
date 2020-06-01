@@ -20,7 +20,7 @@ a {
   font-family: "Mplus 1p", sans-serif;
   cursor: pointer;
   color: black;
-  outline: none;
+  outline: none!important;
 }
 a::-moz-selection {
   background-color: #e7f5dc;
@@ -84,7 +84,7 @@ img {
 }
 button,
 input {
-  outline: none;
+  outline: none!important;
   cursor: pointer;
   padding: 0px;
   margin: 0px;
@@ -510,7 +510,7 @@ input {
   }
 }
 .person-info {
-  margin-top: 66px;
+  margin-top: 46px;
   z-index: 1;
 }
 @media (min-width: 768px) {
@@ -1128,7 +1128,7 @@ input {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  padding: 14px 30px 14px;
+  padding: 10px 20px 10px;
   border-radius: 52px;
   border-width: 3px;
   border-style: solid;
@@ -1148,6 +1148,7 @@ input {
 @media (min-width: 768px) {
   .card-button {
     font-size: 22px;
+    padding: 14px 30px 14px;
   }
 }
 .card-button:hover {
@@ -1498,6 +1499,7 @@ input {
   right: 20px;
   top: 60%;
   z-index: 5;
+  outline: none!important;
 }
 @media (min-width: 768px) {
   #page-nav {
@@ -1518,6 +1520,7 @@ input {
   margin-bottom: 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  outline: none!important;
 }
 #page-nav li a {
   display: block;
@@ -1530,10 +1533,12 @@ input {
   content: '\f3a5';
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  outline: none!important;
 }
 #page-nav li.page-nav__active {
   background-color: transparent;
   border-radius: 50%;
+  outline: none!important;
 }
 @media (min-width: 1200px) {
   #back-top a {

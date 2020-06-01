@@ -246,7 +246,12 @@
     right: 20px;
     top: 60%;
     z-index: 5;
-     
+
+    outline: none!important;
+
+    // outline: none;
+    // user-select: none;
+
     // Для Планшета
     @media (min-width: 768px) {
         right: 20px;
@@ -266,6 +271,8 @@
     border-radius: 50%;
     margin-bottom: 30px;
     transition: 0.5s;
+
+    outline: none!important;
 }
 
 #page-nav li a {
@@ -279,11 +286,15 @@
     font-family: 'FontAwesome';
     content: '\f3a5';
     transition: 0.5s;
+
+    outline: none!important;
 }
 
 #page-nav li.page-nav__active {
     background-color: transparent;
     border-radius: 50%;
+
+    outline: none!important;
 }
 
 #back-top a {
