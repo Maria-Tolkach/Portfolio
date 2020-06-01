@@ -165,12 +165,19 @@ input {
 .logo::after {
   position: absolute;
   content: "";
-  bottom: 11px;
+  bottom: 6px;
   left: -5px;
   right: -5px;
   height: 10px;
   background-color: #94d6ba;
   z-index: -1;
+}
+@media (min-width: 1200px) {
+  .logo::after {
+    bottom: 11px;
+    left: -5px;
+    right: -5px;
+  }
 }
 .center {
   margin-right: auto;
@@ -320,7 +327,7 @@ input {
 .section-title::after {
   position: absolute;
   content: "";
-  bottom: 7px;
+  bottom: 6px;
   left: -5px;
   right: -5px;
   height: 12px;
@@ -557,7 +564,7 @@ input {
 .name::after {
   position: absolute;
   content: "";
-  bottom: 8px;
+  bottom: 6px;
   left: -5px;
   right: -5px;
   height: 12px;

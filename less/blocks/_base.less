@@ -123,12 +123,23 @@ button, input {
 .logo::after {
     position: absolute;
     content: "";
-    bottom: 11px;
+    bottom: 6px;
     left: -5px;
     right: -5px;
     height: 10px;
     background-color: rgb(148, 214, 186);
     z-index: -1;
+    // Для Планшета
+    @media (min-width: 768px) {
+
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        bottom: 11px;
+        left: -5px;
+        right: -5px;
+    }
 } 
 
 .center {
@@ -250,7 +261,7 @@ button, input {
 .section-title::after {
     position: absolute;
     content: "";
-    bottom: 7px;
+    bottom: 6px;
     left: -5px;
     right: -5px;
     height: 12px;
