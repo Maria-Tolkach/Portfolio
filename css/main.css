@@ -524,7 +524,7 @@ input {
   color: #393f47;
   font-size: 18px;
   font-weight: 400;
-  max-width: 280px;
+  max-width: 560px;
   line-height: 1.7;
 }
 @media (min-width: 768px) {
@@ -869,14 +869,14 @@ input {
   margin-right: 0px;
 }
 .social-icons .fa-github {
-  font-size: 58px;
+  font-size: 52px;
 }
 .social-icons .fa-telegram {
   color: #039be5;
   font-size: 50px;
 }
-.social-icons .fa-vk {
-  padding: 10px 9px;
+.social-icons .fa-linkedin {
+  padding: 10px 11px;
   margin-bottom: 22px;
   font-size: 30px;
   color: white;
@@ -951,7 +951,7 @@ input {
   font-weight: 800;
 }
 .portfolio_card {
-  max-width: 290px;
+  max-width: 400px;
   margin-top: 40px;
 }
 @media (min-width: 768px) {
@@ -1228,6 +1228,54 @@ input {
           transform: translate(-50%, -50%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+.new-small-card {
+  max-width: 400px;
+  margin-bottom: 26px;
+  margin-top: 46px;
+}
+@media (min-width: 768px) {
+  .new-small-card {
+    margin-bottom: 32px;
+    max-width: 338px;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .new-small-card {
+    margin-bottom: 22px;
+    max-width: 360px;
+  }
+}
+.new-small-card:last-child {
+  margin-right: 0;
+}
+.new-small-card img {
+  position: center;
+}
+@media (min-width: 768px) {
+  .new-small-card img {
+    width: 226px;
+    height: 130px;
+  }
+}
+@media (min-width: 1200px) {
+  .new-small-card img {
+    width: 360px;
+    height: 205.68px;
+  }
+}
+@media (min-width: 768px) {
+  .new-small-button {
+    font-size: 16px;
+    padding: 10px 20px 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .new-small-button {
+    font-size: 20px;
+    padding: 15px 30px 15px;
+  }
 }
 .header-nav {
   position: fixed;

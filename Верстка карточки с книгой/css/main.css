@@ -1,0 +1,113 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #e3f2fd;
+  position: relative;
+  margin: 0px;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+p, h1 {
+  margin: 0px;
+}
+.card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 967px;
+  border-radius: 8px;
+
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 55px 0px rgba(181, 220, 248, 1);
+
+  padding-top: 60px;
+  padding-right: 70px;
+  padding-bottom: 40px;
+  padding-left: 70px;
+}
+.card:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.card-img-wrapper {
+  float: left;
+  width: 371px;
+  height: 100%;
+}
+
+.card-content-wrapper {
+  float: right;
+  padding-top: 9px;
+  width: 426px;
+}
+.card-book {
+  margin-bottom: 7px;
+  font-size: 18px;
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+  color: #bfc5c8;
+}
+
+.card-title {
+  margin-bottom: 23px;
+  font-size: 38px;
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+  color: #01a4bd;
+  line-height: 1.2;
+}
+.card-text {
+  margin-bottom: 14px;
+  font-family: "PT Sans";
+  font-size: 15px;
+  font-weight: 400;
+  color: #6c757f;
+  line-height: 1.2;
+}
+.abzats {
+  margin-bottom: 15px;
+}
+.card-details-wrapper {
+  margin-bottom: 21px;
+}
+.card-label {
+  border-bottom: 10px;
+  color: #bfc5c8;
+  font-family: "Noto Serif";
+  font-size: 18px;
+  font-weight: 700;
+}
+.card-price {
+  color: #000000;
+  font-family: "PT Sans";
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.card-button {
+  display: inline-block;
+  padding-top: 10px;
+  padding-right: 35px;
+  padding-bottom: 14px;
+  padding-left: 34px;
+  border-radius: 5px;
+  background-color: #e2013b;
+
+  color: #ffffff;
+  font-family: "PT Sans";
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+}

@@ -63,7 +63,7 @@
 }
 
 .portfolio_card {
-    max-width: 290px;
+    max-width: 400px;
     margin-top: 40px;
 
     // Для Планшета
@@ -332,4 +332,54 @@
     display: block;
     transform: translate(-50%, -50%);
     transition: 0.5s;
+}
+
+.new-small-card {
+    max-width: 400px;
+    margin-bottom: 26px;
+    margin-top: 46px;
+    
+    // Для Планшета
+    @media (min-width: 768px) {
+        margin-bottom: 32px;
+        max-width: 338px;
+        margin-right: 15px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        margin-bottom: 22px;
+        max-width: 360px;
+        // max-height: 205.68px;
+    }
+
+    &:last-child{margin-right: 0;}
+    img {
+        position: center;
+        // Для Планшета
+        @media (min-width: 768px) {
+            width: 226px;
+            height: 130px;
+        }
+
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            width: 360px;
+            height: 205.68px;
+        }
+    }
+}
+
+.new-small-button {
+    // Для Планшета
+    @media (min-width: 768px) {
+        font-size: 16px;
+        padding: 10px 20px 10px;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        font-size: 20px;
+        padding: 15px 30px 15px;
+    }
 }
