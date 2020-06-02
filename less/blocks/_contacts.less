@@ -170,7 +170,10 @@
         &:hover {border-bottom: 1px solid #039be5;}
         &:active, &:focus {
             color: #8cd2b5;
-            border-bottom: 1px solid #8cd2b5;
+            // Для Laptop
+            @media (min-width: 1024px) {
+                border-bottom: 1px solid #8cd2b5;
+            }
         }
     }
 }
@@ -302,6 +305,7 @@
 .contacts__yellow-button {
     padding: 11px 76px 13px;
     font-size: 20px;
+    font-family: "Mplus 1p", sans-serif;
 
     // Для Планшета
     @media (min-width: 768px) {

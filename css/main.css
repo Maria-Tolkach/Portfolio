@@ -336,7 +336,7 @@ input {
 }
 @media (min-width: 768px) {
   .section-title::after {
-    bottom: 12px;
+    bottom: 9px;
   }
 }
 @media (min-width: 1200px) {
@@ -564,23 +564,23 @@ input {
 .name::after {
   position: absolute;
   content: "";
-  bottom: 6px;
-  left: -5px;
-  right: -5px;
+  bottom: 5px;
+  left: -3px;
+  right: -3px;
   height: 12px;
   background-color: #94d6ba;
   z-index: -1;
 }
 @media (min-width: 768px) {
   .name::after {
-    bottom: 10px;
+    bottom: 8px;
+    left: -5px;
+    right: -5px;
   }
 }
 @media (min-width: 1200px) {
   .name::after {
     bottom: 23px;
-    left: -5px;
-    right: -5px;
     height: 12px;
   }
 }
@@ -970,7 +970,7 @@ input {
 .portfolio_card p {
   font-size: 16px;
   font-weight: 300;
-  font-family: "Mplus 1p";
+  font-family: "Mplus 1p", sans-serif;
   margin-top: 5px;
 }
 @media (min-width: 768px) {
@@ -1128,6 +1128,7 @@ input {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  white-space: nowrap;
   padding: 10px 20px 10px;
   border-radius: 52px;
   border-width: 3px;
@@ -1312,6 +1313,7 @@ input {
 @media (min-width: 1200px) {
   .header-nav a:nth-child(5) {
     margin-bottom: 0;
+    margin-right: 0;
   }
 }
 .header-nav a:last-child {
@@ -2014,7 +2016,12 @@ input {
 .left-details a:active,
 .left-details a:focus {
   color: #8cd2b5;
-  border-bottom: 1px solid #8cd2b5;
+}
+@media (min-width: 1024px) {
+  .left-details a:active,
+  .left-details a:focus {
+    border-bottom: 1px solid #8cd2b5;
+  }
 }
 .details-name {
   font-family: "Mplus 1p";
@@ -2139,6 +2146,7 @@ input {
 .contacts__yellow-button {
   padding: 11px 76px 13px;
   font-size: 20px;
+  font-family: "Mplus 1p", sans-serif;
 }
 @media (min-width: 768px) {
   .contacts__yellow-button {
