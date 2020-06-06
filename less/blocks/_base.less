@@ -140,18 +140,15 @@ button, input {
     }
 } 
 
-.center {
-    margin-right: auto;
-    margin-left: auto;
-}
+.center {align-items: center;}
 
 .row {
     display: flex;
     
-    // Для Лэптопа
-    @media (min-width: 1024px) {
-        justify-content: space-around;
-    }
+    // // Для Лэптопа
+    // @media (min-width: 1024px) {
+    //     // justify-content: space-around;
+    // }
 
     // Для Десктопа
     @media (min-width: 1200px) {
@@ -174,18 +171,12 @@ button, input {
 
 .column {
     flex-direction: column;
-    align-items: baseline;
-    
+ 
     // Для Планшета
     @media (min-width: 768px) {
         flex-direction: row;
         justify-content: space-around;
-    }
-
-    // Для Планшета
-    @media (min-width: 1000px) {
-        flex-direction: row;
-        justify-content: space-around;
+        align-items: baseline;
     }
 
     // Для Десктопа

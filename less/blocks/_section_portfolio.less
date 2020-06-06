@@ -346,11 +346,20 @@
         margin-right: 15px;
     }
 
+    // Для laptop
+    @media (min-width: 800px) {
+        margin-bottom: 22px;
+        max-width: 252px;
+        width: 30%;
+        margin-right: 0px;
+        padding-left: 10px;
+    }
+
     // Для Десктопа
     @media (min-width: 1200px) {
-        margin-bottom: 22px;
         max-width: 360px;
-        // max-height: 205.68px;
+        padding-left: 0;
+        margin-bottom: 22px;
     }
 
     &:last-child{margin-right: 0;}
@@ -366,6 +375,13 @@
         @media (min-width: 1200px) {
             width: 360px;
             height: 205.68px;
+        }
+    }
+    a {
+        font-size: 22px;
+        // Для Десктопа
+        @media (min-width: 1200px) {
+            font-size: 26px;
         }
     }
 }

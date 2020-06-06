@@ -34,4 +34,12 @@ $(document).ready(function () {
         logo.classList.toggle('active');
         bodyElement.classList.remove('nonscroll');
    })
+
+   mobMenu.addEventListener('click', function () {
+    this.classList.remove('active');
+    mobileMenuToggle.classList.remove('active');
+    overlay.classList.remove('active');
+    bodyElement.classList.remove('nonscroll');
+    })
+    /*то есть, говорим: если был клик по моб меню (а ссылки внутри моб меню и клик по ссылкам будет рассматриваться ,как клику по меню),  то у всех , кто участвует в показе моб меню удаляем  тот класс, который делает каждый участвующий элемент активным*/
 })
