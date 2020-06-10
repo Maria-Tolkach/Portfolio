@@ -35,7 +35,11 @@ h1, h2, h3, h4, h5, h6, p {
     &::selection {background-color: #e7f5dc;}
 }
 
-span {&::selection {background-color: #e7f5dc;}}
+span {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &::selection {background-color: #e7f5dc;}
+}
 
 img {
     max-width: 100%;
@@ -44,10 +48,11 @@ img {
 }
 
 button, input {
-    outline: none!important;
+    outline: none;
     cursor: pointer;
     padding: 0px;
     margin: 0px;
+    font-family: "Mplus 1p", sans-serif;
     -moz-appearance: none;
     -webkit-appearance: none;
 }
@@ -146,11 +151,6 @@ button, input {
 
 .row {
     display: flex;
-    
-    // // Для Лэптопа
-    // @media (min-width: 1024px) {
-    //     // justify-content: space-around;
-    // }
 
     // Для Десктопа
     @media (min-width: 1200px) {
