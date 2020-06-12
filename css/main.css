@@ -20,7 +20,9 @@ a {
   font-family: "Mplus 1p", sans-serif;
   cursor: pointer;
   color: black;
-  outline: none!important;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 a::-moz-selection {
   background-color: #e7f5dc;
@@ -71,6 +73,10 @@ h6::selection,
 p::selection {
   background-color: #e7f5dc;
 }
+span {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
 span::-moz-selection {
   background-color: #e7f5dc;
 }
@@ -84,10 +90,13 @@ img {
 }
 button,
 input {
-  outline: none!important;
+  outline: none;
   cursor: pointer;
   padding: 0px;
   margin: 0px;
+  font-family: "Mplus 1p", sans-serif;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 #overlay {
   position: fixed;
@@ -251,7 +260,6 @@ input {
 .yellow-button {
   display: inline-block;
   padding: 15px 42px 17px;
-  font-family: "Mplus 1p";
   font-size: 22px;
   font-weight: 700;
   border: none;
@@ -272,7 +280,6 @@ input {
 .button {
   padding: 11px 37px 11px;
   color: #464646;
-  font-family: "Mplus 1p";
   font-size: 22px;
   font-weight: 700;
   border-radius: 32px;
@@ -472,6 +479,8 @@ input {
   background-color: rgba(148, 214, 186, 0.5);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 .header-icons a:hover:after {
   width: 100%;
@@ -528,11 +537,17 @@ input {
   }
 }
 .name {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   position: relative;
   font-size: 42px;
   line-height: 1.2;
   font-weight: 800;
   z-index: 1;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 @media (min-width: 768px) {
   .name {
@@ -567,8 +582,10 @@ input {
 }
 @media (min-width: 1200px) {
   .name::after {
-    bottom: 23px;
+    bottom: 11px;
     height: 12px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
   }
 }
 .header-buttons {
@@ -997,7 +1014,7 @@ input {
 .portfolio_small-cards p {
   font-size: 16px;
   margin-top: 4px;
-  font-family: "Mplus 1p";
+  font-family: "Mplus 1p", sans-serif;
   font-weight: 300;
 }
 @media (min-width: 768px) {
@@ -2081,7 +2098,7 @@ input {
   }
 }
 .details-name {
-  font-family: "Mplus 1p";
+  font-family: "Mplus 1p", sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
@@ -2093,7 +2110,7 @@ input {
 }
 .details-value {
   color: #96969d;
-  font-family: "Mplus 1p";
+  font-family: "Mplus 1p", sans-serif;
   font-size: 18px;
   font-weight: 500;
 }
