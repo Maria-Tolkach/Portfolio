@@ -151,6 +151,9 @@ input {
 .logo {
   position: relative;
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 42px;
   font-weight: 900;
   z-index: 1;
@@ -302,6 +305,10 @@ input {
 }
 .section-title {
   position: relative;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 42px;
   font-weight: 800;
   z-index: 1;
@@ -333,7 +340,7 @@ input {
 }
 @media (min-width: 1200px) {
   .section-title::after {
-    bottom: 15px;
+    bottom: 18px;
   }
 }
 .link {
@@ -582,7 +589,7 @@ input {
 }
 @media (min-width: 1200px) {
   .name::after {
-    bottom: 11px;
+    bottom: 12px;
     height: 12px;
     -moz-appearance: none;
     -webkit-appearance: none;
