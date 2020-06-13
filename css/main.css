@@ -159,6 +159,8 @@ input {
   z-index: 1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 @media (min-width: 768px) {
   .logo {
@@ -312,6 +314,8 @@ input {
   font-size: 42px;
   font-weight: 800;
   z-index: 1;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 @media (min-width: 768px) {
   .section-title {
