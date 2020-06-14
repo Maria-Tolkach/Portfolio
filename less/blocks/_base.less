@@ -135,7 +135,7 @@ button, input {
 .logo::after {
     position: absolute;
     content: "";
-    bottom: 6px;
+    bottom: 11px;
     left: -5px;
     right: -5px;
     height: 10px;
@@ -149,6 +149,58 @@ button, input {
         right: -5px;
     }
 } 
+
+.languages-en-cz {
+    display: flex;
+    position: absolute;
+    top: 56%;
+    right: 25%;
+    transform: translateY(-50%);
+
+    // Для Планшета
+    @media (min-width: 768px) {
+        right: 15%;
+    }
+
+    // Для Десктопа
+    @media (min-width: 1200px) {
+        right: 7%;
+    }
+}
+
+.language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 25px;
+    transition: 0.5s;
+    color: rgba(91, 157, 52, 0.8);
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: -1;
+        width: 0%;
+        border-radius: 50%;
+        background-color: rgba(148, 214, 186, 0.5);
+        transition: 0.5s;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+    } 
+    &:hover:after {
+        width: 100%;
+        border-radius: 50%;
+    }
+    &:hover {transform: scale(1.08);}
+}
 
 .center {align-items: center;}
 
@@ -237,6 +289,8 @@ button, input {
     position: relative;
     display: block;
     width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 42px;
     font-weight: 800;
     z-index: 1;
