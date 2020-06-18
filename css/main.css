@@ -154,7 +154,7 @@ input {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 900;
   z-index: 1;
   -webkit-transition: 0.5s;
@@ -165,6 +165,7 @@ input {
 @media (min-width: 768px) {
   .logo {
     margin-left: 18px;
+    font-size: 42px;
   }
 }
 @media (min-width: 1200px) {
@@ -185,6 +186,8 @@ input {
   height: 10px;
   background-color: #94d6ba;
   z-index: -1;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 @media (min-width: 1200px) {
   .logo::after {
@@ -395,21 +398,27 @@ input {
 .section-title::after {
   position: absolute;
   content: "";
-  bottom: 6px;
+  bottom: 11px;
   left: -5px;
   right: -5px;
   height: 12px;
   background-color: #94d6ba;
   z-index: -1;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 @media (min-width: 768px) {
   .section-title::after {
-    bottom: 9px;
+    bottom: 12px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
   }
 }
 @media (min-width: 1200px) {
   .section-title::after {
     bottom: 18px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
   }
 }
 .link {
@@ -659,7 +668,7 @@ input {
 }
 @media (min-width: 1200px) {
   .name::after {
-    bottom: 12px;
+    bottom: 11px;
     height: 12px;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -1219,10 +1228,8 @@ input {
   font-size: 18px;
   color: #4b6154;
   font-weight: 800;
-  -webkit-transform: translate(-250%);
-          transform: translate(-250%);
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transform: translate(250%);
+          transform: translate(250%);
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1300,15 +1307,15 @@ input {
   display: block;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 .portfolio_small-card:hover .small-card__button {
   display: block;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 .new-small-card {
   max-width: 400px;
