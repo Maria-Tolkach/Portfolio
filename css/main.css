@@ -149,11 +149,11 @@ input {
   }
 }
 .logo {
-  position: relative;
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  position: relative;
   font-size: 40px;
   font-weight: 900;
   z-index: 1;
@@ -664,6 +664,8 @@ input {
     bottom: 8px;
     left: -5px;
     right: -5px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
   }
 }
 @media (min-width: 1200px) {
